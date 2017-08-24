@@ -121,5 +121,22 @@ let g:deoplete#sources#clang#clang_header ="/usr/include/clang/"
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
+""" Neomake
+autocmd! BufWritePost * Neomake " Run Neomake every time the file is saved
+
+let g:neomake_cpp_enabled_makers = ['clang']
+let g:neomake_cpp_clang_maker = {
+            \ 'args': ['-fsyntax-only', '-std=c++11', '-Wall', '-Wextra'],
+            \ 'errorformat':
+            \ '%-G%f:%s:,' .
+            \ '%f:%l:%c: %trror: %m,' .
+            \ '%f:%l:%c: %tarning: %m,' .
+            \ '%f:%l:%c: %m,'.
+            \ '%f:%l: %trror: %m,'.
+            \ '%f:%l: %tarning: %m,'.
+            \ '%f:%l: %m',
+            \ }
+
+
 filetype plugin indent on " Enable file type based indenting and syntax highlighting (Note: needs to be at the end)
 syntax on

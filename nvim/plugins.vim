@@ -19,6 +19,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
   Plugin 'shougo/deoplete.nvim' " Auto-completion
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
+  Plugin 'benekastah/neomake' " Code linter
 
   call vundle#end()
 else
