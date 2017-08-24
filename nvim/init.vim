@@ -113,6 +113,10 @@ let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 """ Deoplete
 let g:deoplete#enable_at_startup = 1
 
+" Required fields for Deoplete-Clang (see Deoplete-Clang GitHub page for info)
+let g:deoplete#sources#clang#libclang_path = "/usr/lib/llvm-3.8/lib/libclang.so"
+let g:deoplete#sources#clang#clang_header ="/usr/include/clang/"
+
 
 filetype plugin indent on " Enable file type based indenting and syntax highlighting (Note: needs to be at the end)
 syntax on
