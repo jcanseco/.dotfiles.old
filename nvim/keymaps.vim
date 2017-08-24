@@ -27,12 +27,6 @@ vmap > >gv
 " remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
-" Toggle NERDTree
-nnoremap <Leader>g :NERDTreeToggle<CR>
-
-" In NERDTree, expand to path of file in current buffer
-nnoremap <silent> <Leader>h :NERDTreeFind<CR>
-
 " Open CtrlP for switching between already-opened buffers
 noremap <C-b> :CtrlPBuffer<CR>
 

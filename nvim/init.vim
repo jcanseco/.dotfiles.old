@@ -78,15 +78,6 @@ let g:airline#extensions#tabline#show_splits=0
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR" " create new line and move cursor one tab into body when creating code block with braces
 
 
-""" NERDTree
-let NERDTreeShowHidden=1 " show hidden files in NERDTree
-let NERDTreeQuitOnOpen=0 " leave NERDTree open after opening a file
-let NERDTreeAutoDeleteBuffer=1 " delete buffer of the file you just deleted
-let NERDTreeMinimalUI=1
-let NERDTreeMapActivateNode='<space>' " expand directories using space
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " close vim if only remaining window is NERDTree
-
-
 """ CtrlP
 let g:ctrlp_cmd='CtrlPMixed' " set CtrlP to search files, most-recently-used and open buffers at the same time, but defaults to files (press Ctrl+B while the CtrlP window is open to cycle modes)
 let g:ctrlp_custom_ignore={

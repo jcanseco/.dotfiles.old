@@ -13,7 +13,6 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces) and adjust shiftwidth and expandtab accordingly
   Plugin 'sickill/vim-pasta' " Context-aware pasting (i.e. changes indentation of pasted text to match that of surrounding text)
   Plugin 'tpope/vim-commentary' " Comment stuff out
-  Plugin 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " File drawer
   Plugin 'sheerun/vim-polyglot' " Better syntax highlighting for various languages
   Plugin 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
   Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
