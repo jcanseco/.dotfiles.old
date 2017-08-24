@@ -117,6 +117,9 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#clang#libclang_path = "/usr/lib/llvm-3.8/lib/libclang.so"
 let g:deoplete#sources#clang#clang_header ="/usr/include/clang/"
 
+" Automatically close the Scratch (i.e Preview) window
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+
 
 filetype plugin indent on " Enable file type based indenting and syntax highlighting (Note: needs to be at the end)
 syntax on
