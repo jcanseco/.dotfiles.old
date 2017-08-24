@@ -29,7 +29,7 @@ colorscheme onedark
 set number " show current line number on the side bar
 set relativenumber " show numbers of other lines relative to the current line
 set noshowmode " disable the mode status at the bottom
-set showcmd " show current command at the bottom of screen
+set showcmd " show last command executed at the bottom of screen
 set scrolloff=8 " keep 8 screen lines above/below the cursor if possible
 set ignorecase " ignore case when searching ...
 set smartcase " ... unless search pattern contains upper case characters
@@ -51,9 +51,9 @@ set backspace=indent,eol,start " allow backspacing through autoindents, line-end
 
 """ Tab Control
 set expandtab " replace tabs with spaces
-set tabstop=4 " visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
+set tabstop=4 " # of spaces used to visually represent the <TAB> character. So when vim opens a file and sees a <TAB> char, it represents that with the given # of spaces
+set softtabstop=4 " # of spaces inserted when you hit tab in Insert mode, and the # of spaces deleted when you hit backspace on a tab
+set shiftwidth=4 " # of spaces to use for indent and unindent
 
 " Language-specific tab indentation
 autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
