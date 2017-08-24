@@ -47,6 +47,7 @@ set hlsearch " highlight search results
 set noswapfile " don't make swap files
 set formatoptions=croqlj " format options that are good for Google style. See :help fo-table
 set backspace=indent,eol,start " allow backspacing through autoindents, line-endings, and backwards through the start of an insertion
+set cursorline " highlight current line
 
 
 """ Tab Control
