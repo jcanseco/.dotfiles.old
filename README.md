@@ -23,11 +23,11 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-   Ensure to update the oh-my-zsh path in the `.zshrc`.
+   Ensure to update the oh-my-zsh path in `.zshrc`.
 
 ### Tmux
 
-* [TPM](https://github.com/tmux-plugins/tpm)
+* [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
    Hit `<PREFIX>-I` to install plugins.
 
@@ -35,7 +35,7 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
 
-   Invoke :PluginInstall while in vim to install plugins.
+   Invoke `:PluginInstall` while in vim to install plugins.
 
 * Clang and Libclang (for Deoplete and Neomake)
 
