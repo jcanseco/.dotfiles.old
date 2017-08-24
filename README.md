@@ -65,6 +65,10 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
    sudo apt-get install clang-tidy
    ```
 
+* [Universal Ctags](https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags)
+
+   Used for semantic indexing (useful for things like Go-to-Definition).
+
 * [SilverSearcher](https://github.com/ggreer/the_silver_searcher)
 
    Used to speed up indexing for CtrlP. Ensure that `ag` exists in `/usr/bin/`.

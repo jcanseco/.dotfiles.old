@@ -20,6 +20,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'shougo/deoplete.nvim' " Auto-completion
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
   Plugin 'benekastah/neomake' " Code linter
+  Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
 
   call vundle#end()
 else
