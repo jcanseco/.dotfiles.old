@@ -124,7 +124,7 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 """ Neomake
 autocmd! BufWritePost * Neomake " Run Neomake every time the file is saved
 
-let g:neomake_cpp_enabled_makers = ['clang']
+let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
 let g:neomake_cpp_clang_maker = {
             \ 'args': ['-fsyntax-only', '-std=c++11', '-Wall', '-Wextra'],
             \ 'errorformat':
@@ -135,6 +135,16 @@ let g:neomake_cpp_clang_maker = {
             \ '%f:%l: %trror: %m,'.
             \ '%f:%l: %tarning: %m,'.
             \ '%f:%l: %m',
+            \ }
+let g:neomake_cpp_clangtidy_maker = {
+            \ 'exe': 'clang-tidy',
+            \ 'args': ['--checks="modernize-*,readability-*,misc-*,clang-analyzer-*"'],
+            \ 'errorformat':
+            \ '%E%f:%l:%c: fatal error: %m,' .
+            \ '%E%f:%l:%c: error: %m,' .
+            \ '%W%f:%l:%c: warning: %m,' .
+            \ '%-G%\m%\%%(LLVM ERROR:%\|No compilation database found%\)%\@!%.%#,' .
+            \ '%E%m',
             \ }
 
 
