@@ -1,0 +1,11 @@
+[user]
+	name = Jazel Canseco
+	email = jazel.canseco@gmail.com
+[push]
+	default = simple
+[color]
+	ui = true
+[alias]
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+[core]
+	editor = vim

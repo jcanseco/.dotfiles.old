@@ -1,0 +1,60 @@
+# Plugins
+set -g @plugin 'tmux-plugins/tpm' # plugin manager
+set -g @plugin 'tmux-plugins/tmux-sensible' # basic tmux settings
+set -g @plugin 'odedlaz/tmux-onedark-theme' # one dark theme
+set -g @plugin 'christoomey/vim-tmux-navigator' # seamlessly move between vim-splits and tmux panes
+
+# Override the TERM variable used by tmux to work well with the One Dark theme
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+
+# Date format on status bar (for One Dark theme)
+set -g @onedark_date_format "%D"
+
+# Time format on status bar (for One Dark theme)
+set -g @onedark_time_format "%I:%M %p"
+
+# Set prefix to C-a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
+# Split panes using | and _
+bind | split-window -h -c '#{pane_current_path}'
+bind _ split-window -v -c '#{pane_current_path}'
+unbind '"'
+unbind %
+
+# Open a new window using N
+bind N new-window -c '#{pane_current_path}'
+
+# Switch panes using vim keys
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Resize pane using Ctrl + vim keys
+bind -r C-h resize-pane -L 5
+bind -r C-j resize-pane -D 5
+bind -r C-k resize-pane -U 5
+bind -r C-l resize-pane -R 5
+
+# Set pane borders to be solid white lines
+set-option -g pane-border-fg white
+set-option -g pane-active-border-fg white
+
+# Enable mouse support for switching panes/windows
+setw -g mouse on
+
+# Don't rename windows automatically
+set-option -g allow-rename off
+
+# Make window/pane index start with 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Reload config file using r
+bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
+
+# Initialize tmux plugin manager (always keep this line at the very bottom)
+run '~/.tmux/plugins/tpm/tpm'

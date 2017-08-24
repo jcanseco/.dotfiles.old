@@ -1,0 +1,16 @@
+# Path to oh-my-zsh installation
+export ZSH=/home/jcanseco/.oh-my-zsh
+
+# Aliases
+alias vim="nvim"
+
+# Theme Settings
+ZSH_THEME="robbyrussell"
+DEFAULT_USER="jcanseco" # remove username from status
+
+# Plugin Settings (must go before sourcing oh-my-zsh.sh)
+plugins=(git tmux)
+ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
+
+# Load the oh-my-zsh script
+source $ZSH/oh-my-zsh.sh
