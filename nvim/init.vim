@@ -34,9 +34,9 @@ set scrolloff=8 " keep 8 screen lines above/below the cursor if possible
 set ignorecase " ignore case when searching ...
 set smartcase " ... unless search pattern contains upper case characters
 set smartindent " smart autoindenting when starting a new line
-set wrap linebreak " wrap long lines; don't break words
+set nowrap " don't wrap lines
+set linebreak " wrap long lines; don't break words
 set colorcolumn=81 " highlight the 81st column
-set nowrap " Don't break lines visually
 set mouse-=a " Disable mouse click to go to position
 set autoread " detect when a file is changed
 set list lcs=tab:\ \ " when cursor is on a tab char, go to beginning of tab, not end (Note: the space after the second \ is important)
