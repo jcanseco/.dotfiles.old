@@ -57,6 +57,10 @@ set tabstop=4 " visible width of tabs
 set softtabstop=4 " edit as if the tabs are 4 characters wide
 set shiftwidth=4 " number of spaces to use for indent and unindent
 
+" Language-specific tab indentation
+autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+
 
 """ Auto Commands
 autocmd InsertEnter * :setlocal nohlsearch " toggle hl off when entering insert mode
