@@ -37,7 +37,21 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
    Invoke `:PluginInstall` while in vim to install plugins.
 
-* Clang and Libclang (for Deoplete and Neomake)
+* Python3 Interface for Neovim (for Deoplete)
+
+   ```
+   pip3 install neovim
+   ```
+
+   If Deoplete was installed prior to Python support being added to Neovim, invoke `:UpdateRemotePlugins`.
+
+* Neovim remote client for Python (for Deoplete-Clang)
+
+   ```
+   pip3 install --upgrade neovim
+   ```
+
+* Clang and Libclang (for Deoplete-Clang and Neomake)
 
    ```
    sudo apt-get install clang
