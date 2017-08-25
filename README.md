@@ -67,7 +67,7 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
 * [Universal Ctags](https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags)
 
-   Used for semantic indexing (useful for things like Go-to-Definition).
+   Used for indexing of language objects (useful for things like Go-to-Definition).
 
 * [SilverSearcher](https://github.com/ggreer/the_silver_searcher)
 
