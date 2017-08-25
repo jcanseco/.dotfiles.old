@@ -7,7 +7,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
 
   Plugin 'joshdick/onedark.vim'
 
-  Plugin 'vim-airline/vim-airline' " Statusline
+  Plugin 'vim-airline/vim-airline' " Status line
   Plugin 'vim-airline/vim-airline-themes' " Themes for vim-airline
   Plugin 'Raimondi/delimitMate' " Automatic closing of quotes, parenthesis, brackets, etc.
   Plugin 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces) and adjust shiftwidth and expandtab accordingly
