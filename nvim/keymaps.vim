@@ -40,4 +40,4 @@ noremap <C-f> :CtrlPLine<CR>
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
-nnoremap <C-t> :TagbarToggle<CR>
+nnoremap <C-o> :TagbarToggle<CR>
