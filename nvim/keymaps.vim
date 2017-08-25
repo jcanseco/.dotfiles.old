@@ -39,3 +39,5 @@ noremap <C-f> :CtrlPLine<CR>
 " Cycle through Deoplete suggestions using tab and shift+tab
 inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+
+nnoremap <C-t> :TagbarToggle<CR>
