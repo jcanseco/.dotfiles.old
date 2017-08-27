@@ -86,7 +86,7 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
    sudo apt-get install texlive
    ```
 
-   Latexmk (for compiling LaTeX docs with VimTeX):
+   Latexmk (LaTeX compiler used by VimTeX):
    ```
    sudo apt-get install latexmk
    ```
