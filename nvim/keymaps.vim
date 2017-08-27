@@ -42,3 +42,9 @@ inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
 
 " Open and close Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
+
+" Toggle continuous compilation for LaTex docs
+nmap <Leader>ll <plug>(vimtex-compile)
+
+" View LaTeX doc on a PDF viewer
+nmap <Leader>lv <plug>(vimtex-view)

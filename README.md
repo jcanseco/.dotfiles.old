@@ -72,3 +72,26 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 * [SilverSearcher](https://github.com/ggreer/the_silver_searcher)
 
    Used to speed up indexing for CtrlP. Ensure that `ag` exists in `/usr/bin/`.
+
+* LaTeX Dependencies
+
+   [//]: # "Getting Started with LaTeX on Linux (the basics): https://stackoverflow.com/questions/1017055/get-started-with-latex-on-linux"
+
+   [//]: # "Compile LaTeX doc manually on Linux: https://tex.stackexchange.com/questions/16884/compiling-a-latex-document-manually"
+
+   Note: optional. You only need this if you plan to write LaTeX docs.
+
+   TeXLive (a LaTeX distro):
+   ```
+   sudo apt-get install texlive
+   ```
+
+   Latexmk (for compiling LaTeX docs with VimTeX):
+   ```
+   sudo apt-get install latexmk
+   ```
+
+   Zathura (for viewing the PDF doc; supports closer integration with VimTex)
+   ```
+   sudo apt-get install zathura
+   ```
