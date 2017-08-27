@@ -91,7 +91,11 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
    sudo apt-get install latexmk
    ```
 
-   Zathura (for viewing the PDF doc; supports closer integration with VimTex)
+   Zathura (for viewing the PDF doc; supports closer integration with VimTeX)
    ```
    sudo apt-get install zathura
    ```
+
+   To verify that your set-up works, try compiling this [sample LaTeX file](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/TypicalInput.html).
+
+   If you're trying (and failing) to compile an existing LaTeX project, you might be lacking some of the packages it's using.
