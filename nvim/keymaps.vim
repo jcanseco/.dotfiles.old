@@ -48,3 +48,6 @@ nmap <Leader>ll <plug>(vimtex-compile)
 
 " View LaTeX doc on a PDF viewer
 nmap <Leader>lv <plug>(vimtex-view)
+
+" View LaTeX compiler output
+nmap <Leader>lo <plug>(vimtex-compile-output)
