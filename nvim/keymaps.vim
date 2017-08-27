@@ -7,8 +7,12 @@ nnoremap Y y$
 " Move over wrapped lines same as normal lines
 nnoremap j gj
 nnoremap k gk
+
 vnoremap j gj
 vnoremap k gk
+
+nnoremap I g0i
+nnoremap A g$a
 
 " Move between vim-splits using C-hjkl
 nnoremap <C-h> <C-w>h
