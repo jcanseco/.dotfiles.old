@@ -96,6 +96,11 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
    sudo apt-get install zathura
    ```
 
+   Xdotool (required by VimTeX for performing forward searches on Zathura)
+   ```
+   sudo apt-get install xdotool
+   ```
+
    To verify that your set-up works, try compiling this [sample LaTeX file](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/TypicalInput.html).
 
    If you're trying (and failing) to compile an existing LaTeX project, you might be lacking some of the packages it's using.
