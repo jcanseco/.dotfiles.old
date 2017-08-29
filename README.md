@@ -81,8 +81,10 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
    Note: optional. You only need this if you plan to write LaTeX docs.
 
-   TeXLive (a LaTeX distro):
+   TeXLive 2016 (a LaTeX distro):
    ```
+   sudo add-apt-repository ppa:jonathonf/texlive-2016
+   sudo apt-get update
    sudo apt-get install texlive
    ```
 
