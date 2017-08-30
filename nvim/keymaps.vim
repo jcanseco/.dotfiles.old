@@ -53,5 +53,11 @@ nmap <Leader>ll <plug>(vimtex-compile)
 " View LaTeX doc on a PDF viewer
 nmap <Leader>lv <plug>(vimtex-view)
 
-" View LaTeX compiler output
+" View LaTeX compiler output (detailed)
 nmap <Leader>lo <plug>(vimtex-compile-output)
+
+" View LaTeX compilation errors
+nmap <Leader>le <plug>(vimtex-errors)
+
+" Clean up temporary LaTeX compiler output files
+nmap <Leader>lc <plug>(vimtex-clean-full)
