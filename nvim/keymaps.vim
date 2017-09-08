@@ -11,8 +11,10 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-nnoremap I g0i
-nnoremap A g$a
+" Prepend and Append for wrapped lines that behave like in normal lines
+" (useful for writing LaTeX docs)
+nnoremap <Leader>I g0i
+nnoremap <Leader>A g$a
 
 " Move between vim-splits using C-hjkl
 nnoremap <C-h> <C-w>h
