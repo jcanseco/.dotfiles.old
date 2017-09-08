@@ -73,13 +73,11 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
    Used to speed up indexing for CtrlP. Ensure that `ag` exists in `/usr/bin/`.
 
-* LaTeX Dependencies
+* LaTeX Setup (optional)
 
    [//]: # "Getting Started with LaTeX on Linux (the basics): https://stackoverflow.com/questions/1017055/get-started-with-latex-on-linux"
 
    [//]: # "Compile LaTeX doc manually on Linux: https://tex.stackexchange.com/questions/16884/compiling-a-latex-document-manually"
-
-   Note: optional. You only need this if you plan to write LaTeX docs.
 
    TeXLive 2016 (a LaTeX distro):
    ```
@@ -106,3 +104,7 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
    To verify that your set-up works, try compiling this [sample LaTeX file](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/TypicalInput.html).
 
    If you're trying (and failing) to compile an existing LaTeX project, you might be lacking some of the packages it's using.
+
+* Scala Setup (optional)
+
+   Basic Dependencies: [JDK](https://stackoverflow.com/questions/14788345/how-to-install-jdk-on-ubuntu-linux), [SBT](http://www.scala-sbt.org/release/docs/Installing-sbt-on-Linux.html)
