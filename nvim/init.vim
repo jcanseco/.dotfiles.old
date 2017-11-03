@@ -151,6 +151,7 @@ let g:neomake_cpp_clangtidy_maker = {
 
 """ VimTeX
 let g:vimtex_view_method = 'zathura' " set the default PDF viewer
+let g:vimtex_quickfix_latexlog = {'fix_paths' : 0}
 
 
 filetype plugin indent on " Enable file type based indenting and syntax highlighting (Note: needs to be at the end)
