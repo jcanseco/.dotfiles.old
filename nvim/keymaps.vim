@@ -65,3 +65,6 @@ nmap <Leader>le <plug>(vimtex-errors)
 
 " Clean up temporary LaTeX compiler output files
 nmap <Leader>lc <plug>(vimtex-clean-full)
+
+" Sort Scala imports
+nmap <Leader>si :SortScalaImports<CR>
