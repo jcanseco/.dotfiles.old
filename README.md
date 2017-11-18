@@ -14,7 +14,7 @@ For example:
 ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 ```
 
-`.zshrc`, `.tmux.conf`, `.gitconfig`, and `.ctags` must be created in the home directory; `init.vim` must be created in `~/.config/nvim/`.
+`.zshrc`, `.tmux.conf`, `.gitconfig`, `.ideavimrc`, and `.ctags` must be created in the home directory; `init.vim` must be created in `~/.config/nvim/`.
 
 
 ## External Dependencies

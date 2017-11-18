@@ -1,0 +1,67 @@
+" General settings
+set hlsearch " highlight search results
+set ignorecase " ignore case when searching ...
+set smartcase " ... unless search pattern contains upper case characters
+set scrolloff=8 " keep 8 screen lines above/below the cursor if possible
+set showmode " show whether currently in INSERT/NORMAL/REPLACE/VISUAL mode
+set relativenumber " show numbers of other lines relative to the current line
+
+" Set map leader for more key combos
+let mapleader=','
+
+" Like C and D, yank from cursor to end of line
+nnoremap Y y$
+
+" Move over wrapped lines same as normal lines
+nnoremap j gj
+nnoremap k gk
+
+vnoremap j gj
+vnoremap k gk
+
+nnoremap I g^i
+nnoremap A g$a
+
+" Move between splits using C-hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Auto center on search match
+noremap n nzz
+noremap N Nzz
+
+" Align blocks of text and keep them selected
+vmap < <gv
+vmap > >gv
+
+" Highlight last inserted text
+nnoremap gV `[v`]
+
+" Insert space before/after current line
+nnoremap [<space> O<esc>j
+nnoremap ]<space> o<esc>k
+
+" IntelliJ Actions (Editing)
+nnoremap <C-r> :action RenameElement<CR>
+nnoremap gcc :action CommentByLineComment<CR>
+
+" IntelliJ Actions (Navigation)
+nnoremap <C-o> :action Back<CR>
+nnoremap <C-i> :action Forward<CR>
+nnoremap <C-b> :action GotoFile<CR>*
+nnoremap <C-f> :action SearchEverywhere<CR>
+nnoremap <C-[> :action GotoSuperMethod<CR>
+nnoremap <Leader>t :action GotoTest<CR>
+nnoremap <Leader>u :action FindUsages<CR>
+nnoremap <C-w>q :action CloseContent<CR>
+
+" IntelliJ Actions (Run and Debug)
+nnoremap <Leader>r :action RunClass<CR>
+nnoremap <Leader>R :action Run<CR>
+nnoremap <Leader>d :action DebugClass<CR>
+nnoremap <Leader>D :action Debug<CR>
+
+" IntelliJ Actions (Debugging)
+nnoremap <Leader>b :action ToggleLineBreakpoint<CR>
