@@ -31,6 +31,10 @@ vmap > >gv
 " Highlight last inserted text
 nnoremap gV `[v`]
 
+" Insert newline before/after current line
+nnoremap [<space> O<esc>j
+nnoremap ]<space> o<esc>k
+
 " Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
