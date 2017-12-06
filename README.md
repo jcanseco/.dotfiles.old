@@ -16,6 +16,11 @@ ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 
 `.zshrc`, `.tmux.conf`, `.gitconfig`, and `.ctags` must be created in the home directory; `init.vim` must be created in `~/.config/nvim/`.
 
+Note that you can create symlinks to directories in the same way:
+
+```
+ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
+```
 
 ## External Dependencies
 
