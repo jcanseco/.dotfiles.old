@@ -3,10 +3,15 @@ export ZSH=~/.oh-my-zsh
 
 # Aliases
 alias vim="nvim"
+alias za="zathura"
+
 alias dot="cd ~/.dotfiles/"
+alias vdot="vim ~/.dotfiles/**/*(.)" # Open all files in .dotfiles in vim, excluding directories
+
 alias ws="cd ~/Workspace/"
 alias ql="cd ~/Quicklinks/"
 alias doc="cd ~/Documents/"
+alias down="cd ~/Downloads/"
 
 # Theme Settings
 ZSH_THEME="robbyrussell"
