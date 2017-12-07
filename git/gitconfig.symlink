@@ -19,9 +19,9 @@
     pushdel = push --delete origin # delete branch from remote
 
     # basic aliases
-    s = status
-    d = diff HEAD
-    d1 = diff HEAD~1
+    st = status
+    df = diff HEAD
+    df1 = diff HEAD~1
     aa = add -A
     co = checkout
     cob = checkout -b
