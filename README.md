@@ -28,7 +28,7 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
 
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-   Ensure to update the oh-my-zsh path in `.zshrc`.
+   Ensure the path to the oh-my-zsh installation in `.zshrc` is correct.
 
 ### Tmux
 
