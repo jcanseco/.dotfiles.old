@@ -15,6 +15,7 @@ alias doc="cd ~/Documents/"
 alias down="cd ~/Downloads/"
 
 alias q="exit"
+alias qa="tmux kill-pane -a; exit" # Close all tmux panes in window
 
 # Theme Settings
 ZSH_THEME="robbyrussell"
