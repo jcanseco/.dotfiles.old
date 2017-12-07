@@ -21,9 +21,10 @@
     # basic aliases
     s = status
     d = diff HEAD
-    c = checkout
+    aa = add -A
+    co = checkout
+    cob = checkout -b
     f = fetch
     pr = pull --rebase
-    ada = add -A
 [core]
     editor = vim
