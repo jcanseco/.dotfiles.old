@@ -1,11 +1,15 @@
 [user]
-	name = Jazel Canseco
-	email = jazel.canseco@gmail.com
+    name = Jazel Canseco
+    email = jazel.canseco@gmail.com
 [push]
-	default = simple
+    default = simple
 [color]
-	ui = true
+    ui = true
 [alias]
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
+    head = diff HEAD
+    co = checkout
+    ada = add -A
 [core]
-	editor = vim
+    editor = vim
