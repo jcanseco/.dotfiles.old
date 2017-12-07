@@ -3,7 +3,7 @@ export ZSH=~/.oh-my-zsh
 
 # Aliases
 alias vim="nvim"
-alias za="zathura"
+alias za="zathura --fork"
 alias targz="tar -xvzf" # Unzip .tar.gz files
 
 alias dot="cd ~/.dotfiles/"
