@@ -19,8 +19,11 @@
     pushdel = push --delete origin # delete branch from remote
 
     # basic aliases
-    head = diff HEAD
-    co = checkout
+    s = status
+    d = diff HEAD
+    c = checkout
+    f = fetch
+    pr = pull --rebase
     ada = add -A
 [core]
     editor = vim
