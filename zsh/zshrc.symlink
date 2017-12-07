@@ -6,6 +6,8 @@ alias vim="nvim"
 alias za="zathura --fork"
 alias targz="tar -xvzf" # Unzip .tar.gz files
 
+alias cd..="cd .."
+
 alias dot="cd ~/.dotfiles/"
 alias vdot="vim ~/.dotfiles/**/*(.)" # Open all files in .dotfiles in vim, excluding directories
 
