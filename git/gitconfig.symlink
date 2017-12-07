@@ -6,8 +6,19 @@
 [color]
     ui = true
 [alias]
+    # show commit tree for current branch
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+    # show whole commit tree
     lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
+
+    # git pushnew <branchname>; push untracked local branch to remote
+    pushnew = push --set-upstream origin
+
+    # git pushdel <branchname>; delete branch from remote
+    pushdel = push --delete origin # delete branch from remote
+
+    # basic aliases
     head = diff HEAD
     co = checkout
     ada = add -A
