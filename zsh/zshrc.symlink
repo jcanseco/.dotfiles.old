@@ -4,6 +4,7 @@ export ZSH=~/.oh-my-zsh
 # Aliases
 alias vim="nvim"
 alias za="zathura"
+alias targz="tar -xvzf" # Unzip .tar.gz files
 
 alias dot="cd ~/.dotfiles/"
 alias vdot="vim ~/.dotfiles/**/*(.)" # Open all files in .dotfiles in vim, excluding directories
