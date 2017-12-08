@@ -27,5 +27,6 @@
     cob = checkout -b
     f = fetch
     pr = pull --rebase
+    amend = commit --amend
 [core]
     editor = vim
