@@ -28,5 +28,10 @@ tmux new-window -n "git"
 tmux send-keys "cd $PATH_TO_PROJECT; clear" $CR
 tmux send-keys "git status" $CR
 
+# Set up tree window
+tmux new-window -n "tree"
+tmux send-keys "cd $PATH_TO_PROJECT; clear" $CR
+tmux send-keys "tree src" $CR
+
 # Switch to code window
 tmux select-window -t "code"
