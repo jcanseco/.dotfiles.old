@@ -19,7 +19,8 @@ alias down="cd ~/Downloads/"
 alias q="exit"
 alias qa="tmux kill-pane -a; exit" # Close all tmux panes in window
 
-alias proj="~/.dotfiles/scripts/cs434setup.sh" # Launch dev set-up (for CS 434)
+alias proj="cd ~/Workspace/CS434/project/" # Change to project directory (for CS434)
+alias dev="~/.dotfiles/scripts/cs434setup.sh" # Launch dev set-up (for CS 434)
 
 # Theme Settings
 ZSH_THEME="robbyrussell"
