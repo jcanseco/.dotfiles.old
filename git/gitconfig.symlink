@@ -18,6 +18,9 @@
     # git pushdel <branchname>; delete branch from remote
     pushdel = push --delete origin # delete branch from remote
 
+    # git cof <file.txt>; reset a particular file back to HEAD
+    cof = checkout --
+
     # basic aliases
     st = status
     df = diff HEAD
