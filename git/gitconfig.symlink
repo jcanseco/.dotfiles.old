@@ -25,6 +25,7 @@
     st = status
     df = diff HEAD
     df1 = diff HEAD~1
+    a = add
     aa = add -A
     co = checkout
     cob = checkout -b
