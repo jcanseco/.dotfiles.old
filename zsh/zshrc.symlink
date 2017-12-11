@@ -25,6 +25,12 @@ alias tree="tree --dirsfirst"
 alias proj="cd ~/Workspace/CS434/project/" # Change to project directory (for CS434)
 alias dev="~/.dotfiles/scripts/cs434setup.sh" # Launch dev set-up (for CS 434)
 
+alias navy0="141.223.91.135"
+alias navy1="10.10.50.1"
+alias navy2="10.10.50.2"
+alias navy4="10.10.50.3"
+alias navy3="10.10.50.4"
+
 # Theme Settings
 ZSH_THEME="robbyrussell"
 DEFAULT_USER="jcanseco" # remove username from status
