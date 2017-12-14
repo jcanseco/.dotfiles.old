@@ -36,3 +36,6 @@
     amend = commit --amend
 [core]
     editor = vim
+[advice]
+    # disable "how to stage/unstage/add" hints given by git status
+    statusHints = false
