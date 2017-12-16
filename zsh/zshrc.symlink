@@ -34,6 +34,11 @@ ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
 source $ZSH/oh-my-zsh.sh
 
 # List directory contents whenever you cd in
-function chpwd {
+function chpwd() {
   ls
+}
+
+# Search for files the within current directory whose filename matches a given pattern
+function search() {
+  find . -iname "*$@*" | less
 }
