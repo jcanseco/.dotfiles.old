@@ -1,11 +1,41 @@
 [user]
-	name = Jazel Canseco
-	email = jazel.canseco@gmail.com
+    name = Jazel Canseco
+    email = jazel.canseco@gmail.com
 [push]
-	default = simple
+    default = simple
 [color]
-	ui = true
+    ui = true
 [alias]
-	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+    # show commit tree for current branch
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+    # show whole commit tree
+    lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
+
+    # git pushnew <branchname>; push untracked local branch to remote
+    pushnew = push --set-upstream origin
+
+    # git pushdel <branchname>; delete branch from remote
+    pushdel = push --delete origin # delete branch from remote
+
+    # git cof <file.txt>; reset a particular file back to HEAD
+    cof = checkout --
+
+    # basic aliases
+    st = status
+    df = diff HEAD
+    df1 = diff HEAD~1
+    df1 = diff HEAD~2
+    df1 = diff HEAD~3
+    a = add
+    aa = add -A
+    co = checkout
+    cob = checkout -b
+    f = fetch
+    pr = pull --rebase
+    amend = commit --amend
 [core]
-	editor = vim
+    editor = vim
+[advice]
+    # disable "how to stage/unstage/add" hints given by git status
+    statusHints = false

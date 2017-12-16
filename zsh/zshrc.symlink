@@ -1,8 +1,26 @@
 # Path to oh-my-zsh installation
-export ZSH=/home/jcanseco/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Aliases
 alias vim="nvim"
+alias za="zathura --fork"
+alias tgz="tar -xvzf" # Unzip .tar.gz files
+
+alias cd..="cd .."
+alias gti="git"
+
+alias dot="cd ~/.dotfiles/"
+alias vdot="vim ~/.dotfiles/**/*(.)" # Open all files in .dotfiles in vim, excluding directories
+
+alias ws="cd ~/Workspace/"
+alias ql="cd ~/Quicklinks/"
+alias doc="cd ~/Documents/"
+alias down="cd ~/Downloads/"
+
+alias q="exit"
+alias qa="tmux kill-pane -a; exit" # Close all tmux panes in window
+
+alias tree="tree --dirsfirst"
 
 # Theme Settings
 ZSH_THEME="robbyrussell"
@@ -14,3 +32,8 @@ ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
 
 # Load the oh-my-zsh script
 source $ZSH/oh-my-zsh.sh
+
+# List directory contents whenever you cd in
+function chpwd {
+  ls
+}
