@@ -32,3 +32,8 @@ ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
 
 # Load the oh-my-zsh script
 source $ZSH/oh-my-zsh.sh
+
+# List directory contents whenever you cd in
+function chpwd {
+  ls
+}
