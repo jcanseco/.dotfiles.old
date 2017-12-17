@@ -30,6 +30,13 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
 
    Ensure the path to the oh-my-zsh installation in `.zshrc` is correct.
 
+* Nemo File Explorer (optional)
+   ```
+   sudo apt-get install nemo
+   ```
+
+   If you don't want to use Nemo, make sure to change the file explorer used by the `exp` alias in the zsh configuration file.
+
 ### Tmux
 
 * [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
