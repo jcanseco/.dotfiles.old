@@ -34,17 +34,19 @@ ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
 # Load the oh-my-zsh script
 source $ZSH/oh-my-zsh.sh
 
-# List directory contents whenever you cd in
+# Set-up zsh to automatically list directory contents whenever you change directories
 function chpwd() {
   ls
 }
 
-# Search for files within the current directory whose filename matches a given pattern
+# Search for files within the current directory whose filename contains a given string
+# Usage: search <filename>
 function search() {
   find . -iname "*$@*" | less
 }
 
 # Create a symlink to the current directory in ~/Quicklinks/
+# Usage: mkql <name of quicklink>
 function mkql() {
   if [ -d ~/Quicklinks/ ]; then
     ln -s $(pwd) ~/Quicklinks/$1
