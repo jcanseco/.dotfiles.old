@@ -5,6 +5,7 @@ export ZSH=~/.oh-my-zsh
 alias vim="nvim"
 alias za="zathura --fork"
 alias tgz="tar -xvzf" # Unzip .tar.gz files
+alias exp="nemo ." # Open file explorer in current directory
 
 alias cd..="cd .."
 alias gti="git"
