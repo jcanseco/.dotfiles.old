@@ -49,7 +49,7 @@ function search() {
 # Usage: mkql <name of quicklink>
 function mkql() {
   if [ -d ~/Quicklinks/ ]; then
-    ln -s "$(pwd)" ~/Quicklinks/$1
+    ln -s "$(pwd -P)" ~/Quicklinks/$1
   else
     echo "Error: ~/Quicklinks/ does not exist."
   fi
