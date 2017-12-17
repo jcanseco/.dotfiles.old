@@ -43,3 +43,12 @@ function chpwd() {
 function search() {
   find . -iname "*$@*" | less
 }
+
+# Create a symlink to the current directory in ~/Quicklinks/
+function mkql() {
+  if [ -d ~/Quicklinks/ ]; then
+    ln -s $(pwd) ~/Quicklinks/$1
+  else
+    echo "Error: ~/Quicklinks/ does not exist."
+  fi
+}
