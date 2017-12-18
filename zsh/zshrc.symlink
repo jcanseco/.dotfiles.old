@@ -31,6 +31,9 @@ DEFAULT_USER="jcanseco" # remove username from status
 plugins=(git tmux)
 ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
 
+# Options
+setopt CHASE_LINKS # Resolve symlinks when using cd
+
 # Load the oh-my-zsh script
 source $ZSH/oh-my-zsh.sh
 
