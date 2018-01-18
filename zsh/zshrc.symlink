@@ -13,6 +13,7 @@ ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
+alias v="vim"
 alias vim="nvim"
 alias za="zathura --fork"
 alias tgz="tar -xvzf" # Unzip .tar.gz files
