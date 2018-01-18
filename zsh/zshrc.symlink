@@ -25,6 +25,7 @@ alias gti="git"
 alias dot="cd ~/.dotfiles/"
 alias vdot="vim ~/.dotfiles/**/*(.)" # Open all files in .dotfiles in vim, excluding directories
 
+alias h="cd ~"
 alias ws="cd ~/Workspace/"
 alias ql="cd ~/Quicklinks/"
 alias doc="cd ~/Documents/"
