@@ -131,13 +131,15 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install clang-tidy
    ```
 
-* [Universal Ctags](https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags)
+* [Universal Ctags](https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags) (for indexing language objects; useful for things like Go-to-Definition)
 
-   Used for indexing of language objects (useful for things like Go-to-Definition).
+* [SilverSearcher](https://github.com/ggreer/the_silver_searcher) (for speeding up indexing in CtrlP)
 
-* [SilverSearcher](https://github.com/ggreer/the_silver_searcher)
+   ```
+   sudo apt-get install silversearcher-ag
+   ```
 
-   Used to speed up indexing for CtrlP. Ensure that `ag` exists in `/usr/bin/`.
+   Ensure that `ag` exists in `/usr/bin/` and try invoking `ag` in the terminal at least once.
 
 * LaTeX Setup (optional)
 
