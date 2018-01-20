@@ -7,7 +7,7 @@
     ui = true
 [alias]
     # Show a list of git aliases currently set up
-    alias = config --get-regexp ^alias\\.
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
     # Show commit tree for current branch
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
