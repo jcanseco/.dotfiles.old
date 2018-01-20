@@ -182,7 +182,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    To verify that your set-up works, try compiling this [sample LaTeX file](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/TypicalInput.html).
 
-   If you're trying (and failing) to compile an existing LaTeX project, you might be lacking some of the packages it's using.
+   If you're trying (and failing) to compile an existing LaTeX project, you might be lacking some of the LaTeX packages it's using.
 
 * Scala Setup (optional)
 
