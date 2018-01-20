@@ -62,6 +62,8 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    [//]: # "How to install fonts on Linux: https://www.blackmoreops.com/2014/07/31/install-fonts-on-linux/"
 
+   Then simply configure the terminal's settings to use the particular font you want.
+
 ### Zsh
 
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
