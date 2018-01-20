@@ -6,10 +6,13 @@
 [color]
     ui = true
 [alias]
-    # show commit tree for current branch
+    # Show a list of git aliases currently set up
+    alias = config --get-regexp ^alias\\.
+
+    # Show commit tree for current branch
     lol = log --pretty=oneline --abbrev-commit --graph --decorate
 
-    # show whole commit tree
+    # Show whole commit tree
     lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
 
     # git pushnew <branchname>; push untracked local branch to remote
@@ -21,7 +24,7 @@
     # git cof <file.txt>; reset a particular file back to HEAD
     cof = checkout --
 
-    # basic aliases
+    # Basic aliases
     st = status
     df = diff HEAD
     df1 = diff HEAD~1
@@ -37,5 +40,5 @@
 [core]
     editor = vim
 [advice]
-    # disable "how to stage/unstage/add" hints given by git status
+    # Disable "how to stage/unstage/add" hints given by git status
     statusHints = false
