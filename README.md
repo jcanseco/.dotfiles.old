@@ -41,6 +41,9 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
    ```
 
    Note: while this will correct the incorrect/missing symbols problem, you may still need to explicitly download the specific powerline fonts you wish to use.
+
+   For our case in particular, we like to use *Droid Sans Mono for Powerline Bold* (Size 10).
+
    To explicitly download and install certain fonts, just do the following:
 
    * Download the font file (usually a .ttf or .otf file) from the powerline fonts repository
