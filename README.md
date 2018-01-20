@@ -68,9 +68,13 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-   Ensure the path to the Oh-My-Zsh installation in `.zshrc` is correct.
+   ```
+   sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+   ```
 
    Note that installing Oh-My-Zsh will override your current existing `.zshrc` file with the default one that Oh-My-Zsh comes with, so make sure to replace that with the one you have afterwards.
+
+   Also, make sure that the path to the Oh-My-Zsh installation in `.zshrc` is correct.
 
 * Nemo File Explorer (optional)
 
