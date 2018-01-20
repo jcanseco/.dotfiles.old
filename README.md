@@ -1,6 +1,6 @@
 # Set-up
 
-Note: the following set-up instructions assume that you are working on a Ubuntu or Debian-based machine with a Gnome Terminal. It should also be a given that you have Zsh, Neovim, and Tmux installed.
+Note: the following set-up instructions assume that you are working on a Ubuntu or Debian-based machine with a Gnome Terminal. It should also be a given that you have Zsh, Neovim, Tmux, and Git installed.
 
 ## Set up the Home Directory
 
