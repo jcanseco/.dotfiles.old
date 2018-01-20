@@ -133,6 +133,17 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 * [Universal Ctags](https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags) (for indexing language objects; useful for things like Go-to-Definition)
 
+   ```
+   git clone https://github.com/universal-ctags/ctags.git ~/Downloads/ctags
+   cd ~/Downloads/ctags
+   ./autogen.sh
+   ./configure
+   make
+   sudo make install
+   ```
+
+   Feel free to delete `~/Downloads/ctags` after completing the installation.
+
 * [SilverSearcher](https://github.com/ggreer/the_silver_searcher) (for speeding up indexing in CtrlP)
 
    ```
