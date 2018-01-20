@@ -82,7 +82,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install nemo
    ```
 
-   If you don't want to use Nemo, make sure to change the file explorer used by the `exp` alias in the zsh configuration file.
+   If you don't want to use Nemo, make sure to change the file explorer used by the `exp` alias in the Zsh configuration file.
 
 ### Tmux
 
