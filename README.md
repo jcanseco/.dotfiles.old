@@ -1,6 +1,8 @@
 # Set-up
 
-## Symlinks
+## Set up the Home Directory
+
+### Symlinks
 
 After cloning the repository, first start by creating the appropriate symlinks.
 
@@ -24,7 +26,11 @@ Note that you can create symlinks to directories in the same way:
 ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
 ```
 
-## External Dependencies
+### Directories
+
+Create the `Workspace` and `Quicklinks` directories in the home directory if they don't exist yet.
+
+## Set up External Dependencies
 
 ### General/Common
 
