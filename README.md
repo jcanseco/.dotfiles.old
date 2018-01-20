@@ -6,6 +6,8 @@
 
 After cloning the repository, first start by creating the appropriate symlinks.
 
+`.zshrc`, `.tmux.conf`, `.gitconfig`, and `.ctags` must be created in the home directory; `init.vim` must be created in `~/.config/nvim/`.
+
 Recall: symlinks can be created using the following command:
 
 ```
@@ -17,8 +19,6 @@ For example:
 ```
 ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 ```
-
-`.zshrc`, `.tmux.conf`, `.gitconfig`, and `.ctags` must be created in the home directory; `init.vim` must be created in `~/.config/nvim/`.
 
 Note that you can create symlinks to directories in the same way:
 
@@ -69,6 +69,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    Note that installing Oh-My-Zsh will override your current existing `.zshrc` file with the default one that Oh-My-Zsh comes with, so make sure to replace that with the one you have afterwards.
 
 * Nemo File Explorer (optional)
+
    ```
    sudo apt-get install nemo
    ```
