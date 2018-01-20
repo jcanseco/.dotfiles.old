@@ -26,6 +26,14 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
 
 ### General/Common
 
+* [One Dark Theme for Gnome Terminal](https://github.com/denysdovhan/one-gnome-terminal)
+
+   ```
+   wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && . one-dark.sh
+   ```
+
+   You may want to make a copy of the resulting Gnome Terminal profile and tweak the colors a bit to suit your liking.
+
 * [Powerline Fonts](https://github.com/powerline/fonts) (for the powerline strips in vim and tmux)
 
    ```
