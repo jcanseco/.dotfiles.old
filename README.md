@@ -30,6 +30,8 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
 
    Ensure the path to the oh-my-zsh installation in `.zshrc` is correct.
 
+   Note that installing Oh-My-Zsh will override your current existing `.zshrc` file with the default one that Oh-My-Zsh comes with, so make sure to replace that with the one you have afterwards.
+
 * Nemo File Explorer (optional)
    ```
    sudo apt-get install nemo
