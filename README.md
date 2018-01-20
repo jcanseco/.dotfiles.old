@@ -24,11 +24,19 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
 
 ## External Dependencies
 
+### General/Common
+
+* [Powerline Fonts](https://github.com/powerline/fonts) (for the powerline strips in vim and tmux)
+
+   ```
+   sudo apt-get install fonts-powerline
+   ```
+
 ### Zsh
 
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-   Ensure the path to the oh-my-zsh installation in `.zshrc` is correct.
+   Ensure the path to the Oh-My-Zsh installation in `.zshrc` is correct.
 
    Note that installing Oh-My-Zsh will override your current existing `.zshrc` file with the default one that Oh-My-Zsh comes with, so make sure to replace that with the one you have afterwards.
 
