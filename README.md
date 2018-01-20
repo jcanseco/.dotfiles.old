@@ -2,7 +2,9 @@
 
 ## Symlinks
 
-Recall: symbolic links can be created using the following command:
+After cloning the repository, first start by creating the appropriate symlinks.
+
+Recall: symlinks can be created using the following command:
 
 ```
 ln -s <path to actual file> <path to symlink>
