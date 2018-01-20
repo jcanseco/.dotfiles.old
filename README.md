@@ -94,6 +94,10 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
 
+   ```
+   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+   ```
+
    Invoke `:PluginInstall` while in Vim to install plugins.
 
 * Python3 Interface for Neovim (for Deoplete)
