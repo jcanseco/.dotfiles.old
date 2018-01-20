@@ -123,7 +123,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install clang
    ```
 
-   Ensure to update the paths to clang and libclang in the Deoplete-Clang configuration.
+   Ensure to update the paths to clang and libclang in the Deoplete-Clang configuration in `init.vim`.
 
 * ClangTidy (for Neomake)
 
