@@ -1,5 +1,7 @@
 # Set-up
 
+Note: the following set-up instructions assume that you are working on a Ubuntu or Debian-based machine with a Gnome Terminal. It should also be a given that you have Zsh, Neovim, and Tmux installed.
+
 ## Set up the Home Directory
 
 ### Symlinks
@@ -42,19 +44,19 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    You may want to make a copy of the resulting Gnome Terminal profile and tweak the colors a bit to suit your liking.
 
-* [Powerline Fonts](https://github.com/powerline/fonts) (for the powerline strips in vim and tmux)
+* [Powerline Fonts](https://github.com/powerline/fonts) (for the Powerline strips in Vim and Tmux)
 
    ```
    sudo apt-get install fonts-powerline
    ```
 
-   Note: while this will correct the incorrect/missing symbols problem, you may still need to explicitly download the specific powerline fonts you wish to use.
+   Note: while this will correct the incorrect/missing symbols problem, you may still need to explicitly download the specific Powerline fonts you wish to use.
 
    For our case in particular, we like to use **Droid Sans Mono for Powerline Bold** (Size 10).
 
    To explicitly download and install certain fonts, just do the following:
 
-   * Download the font file (usually a .ttf or .otf file) from the powerline fonts repository
+   * Download the font file (usually a .ttf or .otf file) from the Powerline Fonts repository
    * Copy it into ~/.fonts (create the directory if it's missing)
    * `sudo fc-cache -fv`
 
@@ -86,7 +88,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
 
-   Invoke `:PluginInstall` while in vim to install plugins.
+   Invoke `:PluginInstall` while in Vim to install plugins.
 
 * Python3 Interface for Neovim (for Deoplete)
 
