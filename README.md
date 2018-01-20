@@ -32,6 +32,15 @@ ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
    sudo apt-get install fonts-powerline
    ```
 
+   Note: while this will correct the incorrect/missing symbols problem, you may still need to explicitly download the specific powerline fonts you wish to use.
+   To explicitly download and install certain fonts, just do the following:
+
+      1. Download the font file (usually a .ttf or .otf file) from the powerline fonts repository
+      2. Copy it into ~/.fonts (create the directory if it's missing)
+      3. `sudo fc-cache -fv`
+
+   [//]: # "How to install fonts on Linux: https://www.blackmoreops.com/2014/07/31/install-fonts-on-linux/"
+
 ### Zsh
 
 * [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
