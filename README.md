@@ -87,8 +87,11 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 ### Tmux
 
 * [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
+   ```
+   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   ```
 
-   Hit `<PREFIX>-I` to install plugins.
+   Hit `<PREFIX>-I` while in a Tmux session to install plugins.
 
 ### Vim
 
