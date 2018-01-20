@@ -150,7 +150,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install silversearcher-ag
    ```
 
-   Ensure that `ag` exists in `/usr/bin/` and try invoking `ag` in the terminal at least once.
+   Ensure that `ag` exists in `/usr/bin/`. Also, try invoking `ag` in the terminal at least once.
 
 * LaTeX Setup (optional)
 
