@@ -31,6 +31,8 @@ alias ql="cd ~/Quicklinks/"
 alias doc="cd ~/Documents/"
 alias down="cd ~/Downloads/"
 
+alias cl="clear"
+
 alias q="exit"
 alias qa="tmux kill-pane -a; exit" # Close all tmux panes in window
 
