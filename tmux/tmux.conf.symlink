@@ -49,6 +49,9 @@ setw -g mouse on
 # Don't rename windows automatically
 set-option -g allow-rename off
 
+# Renumber windows automatically whenever one is closed
+set-option -g renumber-windows on
+
 # Make window/pane index start with 1
 set -g base-index 1
 setw -g pane-base-index 1
