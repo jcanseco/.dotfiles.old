@@ -22,10 +22,11 @@ alias exp="nemo ." # Open file explorer in current directory
 alias cd..="cd .."
 alias gti="git"
 
-alias dot="cd ~/.dotfiles/"
+alias vv="vim *(.)" # Open all files in current directory in vim, excluding directories
 alias vdot="vim ~/.dotfiles/**/*(.)" # Open all files in .dotfiles in vim, excluding directories
 
 alias h="cd ~"
+alias dot="cd ~/.dotfiles/"
 alias ws="cd ~/Workspace/"
 alias ql="cd ~/Quicklinks/"
 alias doc="cd ~/Documents/"
