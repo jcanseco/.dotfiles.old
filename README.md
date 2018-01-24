@@ -76,6 +76,12 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    Also, make sure that the path to the Oh-My-Zsh installation in `.zshrc` is correct.
 
+* Tree
+
+   ```
+   sudo apt-get install tree
+   ```
+
 * Nemo File Explorer (optional)
 
    ```
