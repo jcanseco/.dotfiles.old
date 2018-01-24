@@ -41,6 +41,8 @@ alias qa="tmux kill-pane -a; exit" # Close all tmux panes in window
 alias ls="ls --color=auto --group-directories-first"
 alias tree="tree --dirsfirst"
 
+alias mkdir="mkdir -pv" # Automatically create intermediate non-existing directories when needed and print a message for each created directory
+
 alias reload="source ~/.zshrc" # Reload the zsh configuration file
 
 # Options
