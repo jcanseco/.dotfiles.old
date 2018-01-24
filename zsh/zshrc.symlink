@@ -39,6 +39,8 @@ alias qa="tmux kill-pane -a; exit" # Close all tmux panes in window
 alias ls="ls --color=auto --group-directories-first"
 alias tree="tree --dirsfirst"
 
+alias reload="source ~/.zshrc" # Reload the zsh configuration file
+
 # Options
 setopt CHASE_LINKS # Resolve symlinks when using cd
 
