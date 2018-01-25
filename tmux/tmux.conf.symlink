@@ -13,37 +13,37 @@ set -g @onedark_date_format "%D"
 # Time format on status bar (for One Dark theme)
 set -g @onedark_time_format "%I:%M %p"
 
-# Set prefix to C-a
+# Set PREFIX to 'Ctrl + a'
 unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 
-# Split panes using | and _
+# Split panes using 'PREFIX + (| or  _)'
 bind | split-window -h -c '#{pane_current_path}'
 bind _ split-window -v -c '#{pane_current_path}'
 unbind '"'
 unbind %
 
-# Open a new window using N
+# Open a new window using 'PREFIX + N'
 bind N new-window -c '#{pane_current_path}'
 
-# Move the current window left or right using Shift+(Left/Right)
+# Move the current window left or right using 'PREFIX + Shift + (Left/Right)'
 bind-key -r S-Left swap-window -t -1
 bind-key -r S-Right swap-window -t +1
 
-# Switch panes using vim keys
+# Switch panes using 'Ctrl + (h/j/k/l)' (i.e. vim keys)
 bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-# Resize pane using Ctrl + vim keys
+# Resize pane using 'PREFIX + Ctrl + (h/j/k/l)'
 bind -r C-h resize-pane -L 5
 bind -r C-j resize-pane -D 5
 bind -r C-k resize-pane -U 5
 bind -r C-l resize-pane -R 5
 
-# Toggle mouse mode on/off
+# Toggle mouse mode on/off using 'PREFIX + m'
 bind m set-option -g mouse \; display "Mouse Mode #{?mouse,ON,OFF}"
 
 # Set pane borders to be solid white lines
@@ -60,7 +60,7 @@ set-option -g renumber-windows on
 set -g base-index 1
 setw -g pane-base-index 1
 
-# Reload config file using r
+# Reload config file using 'PREFIX + r'
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
 
 # Initialize tmux plugin manager (always keep this line at the very bottom)
