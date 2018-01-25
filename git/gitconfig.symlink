@@ -37,6 +37,8 @@
     f = fetch
     pr = pull --rebase
     amend = commit --amend
+    cp = cherry-pick
+    cpa = cherry-pick --abort
 [core]
     editor = vim
 [advice]
