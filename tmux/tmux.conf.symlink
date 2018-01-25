@@ -50,15 +50,15 @@ bind m set-option -g mouse \; display "Mouse Mode #{?mouse,ON,OFF}"
 set-option -g pane-border-fg white
 set-option -g pane-active-border-fg white
 
-# Don't rename windows automatically
-set-option -g allow-rename off
+# Make window/pane index start with 1
+set -g base-index 1
+setw -g pane-base-index 1
 
 # Renumber windows automatically whenever one is closed
 set-option -g renumber-windows on
 
-# Make window/pane index start with 1
-set -g base-index 1
-setw -g pane-base-index 1
+# Don't rename windows automatically
+set-option -g allow-rename off
 
 # Reload config file using 'PREFIX + r'
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
