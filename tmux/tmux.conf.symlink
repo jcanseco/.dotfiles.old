@@ -39,6 +39,9 @@ bind -r C-j resize-pane -D 5
 bind -r C-k resize-pane -U 5
 bind -r C-l resize-pane -R 5
 
+# Toggle mouse mode on/off
+bind m set-option -g mouse \; display "Mouse Mode #{?mouse,ON,OFF}"
+
 # Set pane borders to be solid white lines
 set-option -g pane-border-fg white
 set-option -g pane-active-border-fg white
