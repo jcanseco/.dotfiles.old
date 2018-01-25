@@ -27,9 +27,9 @@ unbind %
 # Open a new window using N
 bind N new-window -c '#{pane_current_path}'
 
-# Move the current window left or right using Ctrl+Shift+(Left/Right)
-bind-key -n C-S-Left swap-window -t -1
-bind-key -n C-S-Right swap-window -t +1
+# Move the current window left or right using Shift+(Left/Right)
+bind-key -r S-Left swap-window -t -1
+bind-key -r S-Right swap-window -t +1
 
 # Switch panes using vim keys
 bind h select-pane -L
