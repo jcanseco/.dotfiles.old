@@ -43,9 +43,6 @@ bind -r C-l resize-pane -R 5
 set-option -g pane-border-fg white
 set-option -g pane-active-border-fg white
 
-# Enable mouse support for switching panes/windows
-setw -g mouse on
-
 # Don't rename windows automatically
 set-option -g allow-rename off
 
