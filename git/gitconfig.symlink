@@ -32,6 +32,8 @@
     df3 = diff HEAD~3
     a = add
     aa = add -A
+    cm = commit -m
+    br = branch
     co = checkout
     cob = checkout -b
     f = fetch
