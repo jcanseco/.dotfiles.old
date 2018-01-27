@@ -36,12 +36,12 @@
     aa = add -A
     ci = commit
     cim = commit -m
+    amend = commit --amend
     br = branch
     co = checkout
     cob = checkout -b
     f = fetch
     pr = pull --rebase
-    amend = commit --amend
     cp = cherry-pick
     cpa = cherry-pick --abort
 [core]
