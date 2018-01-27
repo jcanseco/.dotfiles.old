@@ -21,6 +21,7 @@ alias exp="nemo ." # Open file explorer in current directory
 
 alias cd..="cd .."
 alias gti="git"
+alias igt="git"
 alias gt="git"
 alias got="git"
 
