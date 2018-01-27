@@ -24,6 +24,11 @@
     # git cof <file.txt>; reset a particular file back to HEAD
     cof = checkout --
 
+    # Show changes made in the last commit, the commit before that, etc.
+    l = show HEAD
+    ll = show HEAD~1
+    lll = show HEAD~2
+
     # Basic aliases
     st = status
     df = diff HEAD
