@@ -44,6 +44,8 @@
     pr = pull --rebase
     cp = cherry-pick
     cpa = cherry-pick --abort
+    rb = rebase
+    rbi = rebase -i
 [core]
     editor = vim
 [advice]
