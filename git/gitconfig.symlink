@@ -32,9 +32,6 @@
     # Basic aliases
     st = status
     df = diff HEAD
-    df1 = diff HEAD~1
-    df2 = diff HEAD~2
-    df3 = diff HEAD~3
     a = add
     aa = add -A
     ci = commit
