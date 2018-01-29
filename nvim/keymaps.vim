@@ -25,8 +25,8 @@ noremap n nzz
 noremap N Nzz
 
 " Align blocks of text and keep them selected
-vmap < <gv
-vmap > >gv
+vnoremap < <gv
+vnoremap > >gv
 
 " Highlight last inserted text
 nnoremap gV `[v`]
@@ -67,4 +67,4 @@ nmap <Leader>le <plug>(vimtex-errors)
 nmap <Leader>lc <plug>(vimtex-clean-full)
 
 " Sort Scala imports
-nmap <Leader>si :SortScalaImports<CR>
+nnoremap <Leader>si :SortScalaImports<CR>
