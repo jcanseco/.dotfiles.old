@@ -80,7 +80,7 @@ function mkql() {
 function all() {
   local CR=C-m # Carriage return in tmux
 
-  for pane_index in $(tmux list-panes -F '#P'); do
+  for pane_index in $(tmux list-panes -F '#{pane_index}'); do
     tmux send-keys -t $pane_index "$@" $CR
   done
 }
