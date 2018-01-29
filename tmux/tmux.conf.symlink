@@ -5,7 +5,7 @@ set -g @plugin 'odedlaz/tmux-onedark-theme' # One Dark theme
 set -g @plugin 'christoomey/vim-tmux-navigator' # Seamlessly move between vim-splits and tmux panes
 
 # Override the TERM variable used by tmux to work well with the One Dark theme
-set-option -ga terminal-overrides ",xterm-256color:Tc"
+set -ga terminal-overrides ",xterm-256color:Tc"
 
 # Date format on status bar (for One Dark theme)
 set -g @onedark_date_format "%D"
@@ -28,8 +28,8 @@ unbind %
 bind N new-window -c '#{pane_current_path}'
 
 # Move the current window left or right using 'PREFIX + Shift + (Left/Right)'
-bind-key -r S-Left swap-window -t -1
-bind-key -r S-Right swap-window -t +1
+bind -r S-Left swap-window -t -1
+bind -r S-Right swap-window -t +1
 
 # Switch panes using 'Ctrl + (h/j/k/l)' (i.e. vim keys)
 bind h select-pane -L
@@ -47,18 +47,18 @@ bind -r C-l resize-pane -R 5
 bind m set-option -g mouse \; display "Mouse Mode #{?mouse,ON,OFF}"
 
 # Set pane borders to be solid white lines
-set-option -g pane-border-fg white
-set-option -g pane-active-border-fg white
+set -g pane-border-fg white
+set -g pane-active-border-fg white
 
 # Make window/pane index start with 1
 set -g base-index 1
 setw -g pane-base-index 1
 
 # Renumber windows automatically whenever one is closed
-set-option -g renumber-windows on
+set -g renumber-windows on
 
 # Don't rename windows automatically
-set-option -g allow-rename off
+set -g allow-rename off
 
 # Reload config file using 'PREFIX + r'
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
