@@ -76,6 +76,7 @@ function mkql() {
 
 # Execute a command in all tmux panes
 # Usage: all <command>
+# Warning: does not work very well if you have vim open in one of the panes; it'll just type out the command letter by letter in vim
 function all() {
   local CR=C-m # Carriage return in tmux
 
