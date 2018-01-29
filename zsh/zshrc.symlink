@@ -82,10 +82,14 @@ function all() {
   local active_pane_id=$TMUX_PANE
   local pane_ids=($(tmux list-panes -F '#{pane_id}'))
   for pane_id in $pane_ids; do
-    if [[ $pane_id == $active_pane_id ]]; then
-      eval $cmd
-    else
-      tmux send-keys -t $pane_id "$cmd" C-m
+    if [[ $pane_id != $active_pane_id ]]; then
+      local CR=C-m # Carriage return in tmux
+      tmux send-keys -t $pane_id "$cmd" $CR
     fi
   done
+
+  # Execute the command in the active pane (i.e. the pane executing this function) last.
+  # This is because a command may involve termination of the pane, and we don't want to
+  # terminate the active pane before it could send out the command to other panes.
+  eval $cmd
 }
