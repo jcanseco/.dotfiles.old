@@ -78,9 +78,13 @@ function mkql() {
 # Usage: all <command>
 # Warning: does not work very well if you have vim open in one of the panes; it'll just type out the command letter by letter in vim
 function all() {
-  local CR=C-m # Carriage return in tmux
-
-  for pane_index in $(tmux list-panes -F '#{pane_index}'); do
-    tmux send-keys -t $pane_index "$@" $CR
+  local active_pane_id=$TMUX_PANE
+  local pane_ids=($(tmux list-panes -F '#{pane_id}'))
+  for pane_id in $pane_ids; do
+    if [[ $pane_id == $active_pane_id ]]; then
+      eval $@
+    else
+      tmux send-keys -t $pane_id "$@" C-m
+    fi
   done
 }
