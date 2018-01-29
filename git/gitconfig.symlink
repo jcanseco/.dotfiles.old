@@ -36,7 +36,7 @@
     aa = add -A
     ci = commit
     cim = commit -m
-    am = commit --amend
+    amd = commit --amend
     br = branch
     co = checkout
     cob = checkout -b
