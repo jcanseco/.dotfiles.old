@@ -25,9 +25,9 @@
     cof = checkout --
 
     # Show changes made in the last few commits
-    c1 = show HEAD --format=format:%b
-    c2 = show HEAD~1 --format=format:%b
-    c3 = show HEAD~2 --format=format:%b
+    c1 = diff HEAD~1 HEAD
+    c2 = diff HEAD~2 HEAD~1
+    c3 = diff HEAD~3 HEAD~2
 
     # Basic aliases
     st = status
