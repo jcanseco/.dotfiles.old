@@ -46,6 +46,7 @@
     cpa = cherry-pick --abort
     rb = rebase
     rbi = rebase -i
+    r = reset
     rh = ! bash ~/.dotfiles/scripts/git_reset_hard.sh
 [core]
     editor = vim
