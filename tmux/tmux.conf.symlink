@@ -27,10 +27,20 @@ set -g renumber-windows on
 # Don't rename windows automatically
 set -g allow-rename off
 
+# Use vim keys to navigate when in copy-mode
+setw -g mode-keys vi
+
 # Set PREFIX to 'Ctrl + a'
 unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
+
+# More vim-like key bindings for copy/pasting text
+bind y copy-mode
+bind -t vi-copy v begin-selection
+bind -t vi-copy y copy-selection
+bind -t vi-copy Escape cancel
+bind p paste-buffer
 
 # Split panes using 'PREFIX + (| or  _)'
 bind | split-window -h -c '#{pane_current_path}'
