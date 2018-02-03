@@ -13,6 +13,20 @@ set -g @onedark_date_format "%D"
 # Time format on status bar (for One Dark theme)
 set -g @onedark_time_format "%I:%M %p"
 
+# Set pane borders to be solid white lines
+set -g pane-border-fg white
+set -g pane-active-border-fg white
+
+# Make window/pane index start with 1
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Renumber windows automatically whenever one is closed
+set -g renumber-windows on
+
+# Don't rename windows automatically
+set -g allow-rename off
+
 # Set PREFIX to 'Ctrl + a'
 unbind C-b
 set -g prefix C-a
@@ -45,20 +59,6 @@ bind -r C-l resize-pane -R 5
 
 # Toggle mouse mode on/off using 'PREFIX + w'
 bind w set-option -g mouse \; display "Mouse Mode #{?mouse,ON,OFF}"
-
-# Set pane borders to be solid white lines
-set -g pane-border-fg white
-set -g pane-active-border-fg white
-
-# Make window/pane index start with 1
-set -g base-index 1
-setw -g pane-base-index 1
-
-# Renumber windows automatically whenever one is closed
-set -g renumber-windows on
-
-# Don't rename windows automatically
-set -g allow-rename off
 
 # Reload config file using 'PREFIX + r'
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
