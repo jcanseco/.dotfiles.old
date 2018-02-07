@@ -24,6 +24,9 @@ nnoremap <C-l> <C-w>l
 noremap n nzz
 noremap N Nzz
 
+" Prevent jumping to the next match when pressing *
+nnoremap * :keepjumps normal! mi*`i<CR>
+
 " Align blocks of text and keep them selected
 vnoremap < <gv
 vnoremap > >gv
