@@ -52,7 +52,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    Note: while this will correct the incorrect/missing symbols problem, you may still need to explicitly download the specific Powerline fonts you wish to use.
 
-   For our case in particular, we like to use **Droid Sans Mono for Powerline Bold** (Size 10).
+   For our case in particular, we like to use **Droid Sans Mono for Powerline Bold** (Size 10, and with bold text turned off in Terminal settings).
 
    To explicitly download and install certain fonts, just do the following:
 
