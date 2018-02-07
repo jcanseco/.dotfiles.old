@@ -137,15 +137,10 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install clang-tidy
    ```
 
-* [Universal Ctags](https://askubuntu.com/questions/796408/installing-and-using-universal-ctags-instead-of-exuberant-ctags) (for indexing language objects; useful for things like Go-to-Definition)
+* Exuberant Ctags (for indexing language objects; useful for things like Go-to-Definition)
 
    ```
-   git clone https://github.com/universal-ctags/ctags.git ~/Downloads/ctags
-   cd ~/Downloads/ctags
-   ./autogen.sh
-   ./configure
-   make
-   sudo make install
+   sudo apt-get install exuberant-ctags
    ```
 
    Feel free to delete `~/Downloads/ctags` after completing the installation.
