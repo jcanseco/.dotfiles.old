@@ -54,26 +54,14 @@ sudo apt-get install python-dev python-pip python3-dev python3-pip
 
 ### Symlinks
 
-After cloning the repository, first start by creating the appropriate symlinks.
-
-`.zshrc`, `.tmux.conf`, `.gitconfig`, and `.ctags` must be created in the home directory; `init.vim` must be created in `~/.config/nvim/`.
-
-Recall: symlinks can be created using the following command:
+Clone the repository, then create the appropriate symlinks for your dotfiles:
 
 ```
-ln -s <path to actual file> <path to symlink>
-```
-
-For example:
-
-```
+ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
+ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
 ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
-```
-
-Note that you can create symlinks to directories in the same way:
-
-```
-ln -s ~/Workspace/ECE254/Notes ~/Quicklinks/ECE254-Notes
+ln -s ~/.dotfiles/ctags/ctags.symlink ~/.ctags
+ln -s ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ```
 
 ### Directories
