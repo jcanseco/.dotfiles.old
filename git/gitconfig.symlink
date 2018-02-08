@@ -1,10 +1,6 @@
 [user]
     name = Jazel Canseco
     email = jazel.canseco@gmail.com
-[push]
-    default = simple
-[color]
-    ui = true
 [alias]
     # Show a list of git aliases currently set up
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | less
@@ -53,5 +49,9 @@
 [advice]
     # Disable "how to stage/unstage/add" hints given by git status
     statusHints = false
+[push]
+    default = simple
+[color]
+    ui = true
 [log]
     decorate = auto
