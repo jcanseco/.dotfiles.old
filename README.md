@@ -1,6 +1,44 @@
 # Set-up
 
-Note: the following set-up instructions assume that you are working on a Ubuntu or Debian-based machine with a Gnome Terminal. It should also be a given that you have Zsh, Neovim, Tmux, and Git installed.
+Note: the following set-up instructions assume that you are working on a machine with Ubuntu 16.04 (Xenial). If you're using a different distro, use this as a guideline only, and search up the instructions relevant to your distro at each step.
+
+## Install the Main Tools
+
+### Zsh
+
+```
+sudo apt-get upgrade
+sudo apt-get install zsh
+```
+
+### Tmux (v2.3)
+
+Note: we require at least v2.3 for true color support.
+
+```
+cd ~/Downloads
+
+sudo apt-get install -y libevent-dev libncurses-dev make
+
+wget https://github.com/tmux/tmux/releases/download/2.3/tmux-2.3.tar.gz
+tar -xvzf tmux-2.3.tar.gz
+
+cd tmux-2.3/
+./configure && make
+sudo make install
+```
+
+### Neovim
+
+```
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+
+sudo apt-get install python-dev python-pip python3-dev python3-pip
+```
 
 ## Set up the Home Directory
 
