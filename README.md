@@ -143,8 +143,6 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install exuberant-ctags
    ```
 
-   Feel free to delete `~/Downloads/ctags` after completing the installation.
-
 * [SilverSearcher](https://github.com/ggreer/the_silver_searcher) (for speeding up indexing in CtrlP)
 
    ```
