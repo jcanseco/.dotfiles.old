@@ -46,6 +46,7 @@
     rh = ! bash ~/.dotfiles/scripts/git_reset_hard.sh
 [core]
     editor = vim
+    excludesfile = ~/.dotfiles/git/gitignore.global
 [advice]
     # Disable "how to stage/unstage/add" hints given by git status
     statusHints = false
