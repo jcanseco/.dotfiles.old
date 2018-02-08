@@ -11,6 +11,12 @@ sudo apt-get upgrade
 sudo apt-get install zsh
 ```
 
+Set Zsh as the default shell
+
+```
+chsh -s $(which zsh)
+```
+
 ### Tmux (v2.3)
 
 Note: we require at least v2.3 for true color support.
@@ -28,7 +34,11 @@ cd tmux-2.3/
 sudo make install
 ```
 
+Feel free to delete the tmux-2.3 directory and the tmux-2.3.tar.gz file after finishing installation.
+
 ### Neovim
+
+Note that if you're using an older version of Ubuntu, there are additional steps you must perform. See [here](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu) for the full installation instructions.
 
 ```
 sudo apt-get install software-properties-common
