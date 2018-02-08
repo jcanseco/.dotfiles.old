@@ -53,3 +53,5 @@
 [advice]
     # Disable "how to stage/unstage/add" hints given by git status
     statusHints = false
+[log]
+    decorate = auto
