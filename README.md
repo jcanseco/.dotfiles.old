@@ -102,10 +102,10 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 ### Zsh
 
-* [Oh-My-Zsh](https://github.com/robbyrussell/oh-my-zsh)
+* [Zgen](https://github.com/tarjoilija/zgen)
 
    ```
-   sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+   git clone https://github.com/tarjoilija/zgen.git "~/.zgen"
    ```
 
    Note that installing Oh-My-Zsh will override your current existing `.zshrc` file with the default one that Oh-My-Zsh comes with, so make sure to replace that with the one you have afterwards.

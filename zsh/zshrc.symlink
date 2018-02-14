@@ -1,16 +1,15 @@
-# Path to Oh-My-Zsh installation
-export ZSH=~/.oh-my-zsh
+# Load Zgen for Plugin Management
+source ~/.zgen/zgen.zsh
 
-# Theme Settings (Oh-My-Zsh)
-ZSH_THEME="robbyrussell"
-DEFAULT_USER="jcanseco" # Remove username from status
+# Plugin Configs (must go before plugins are loaded)
+ZSH_TMUX_AUTOSTART="true"
 
-# Plugin Settings (Oh-My-Zsh)
-plugins=(git tmux)
-ZSH_TMUX_AUTOSTART="true" # Launch tmux at terminal startup
+# Plugins
+zgen oh-my-zsh # Library for Oh-My-Zsh themes and plugins
+zgen oh-my-zsh plugins/tmux # Tmux integration
 
-# Load the Oh-My-Zsh script (must go after all Oh-My-Zsh settings)
-source $ZSH/oh-my-zsh.sh
+# Theme (must go after the Oh-My-Zsh library is loaded since this is an Oh-My-Zsh theme)
+source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 
 # Aliases
 alias v="vim"
