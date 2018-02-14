@@ -7,6 +7,7 @@ ZSH_TMUX_AUTOSTART="true"
 # Plugins
 zgen oh-my-zsh # Library for Oh-My-Zsh themes and plugins
 zgen oh-my-zsh plugins/tmux # Tmux integration
+zgen oh-my-zsh plugins/sudo # Quickly add 'sudo' to commands
 zgen load arzzen/calc.plugin.zsh # Calculator for the terminal
 zgen load Tarrasch/zsh-bd # Jump back directories more easily
 zgen load zsh-users/zsh-autosuggestions # As-you-type autosuggestions
