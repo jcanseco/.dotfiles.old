@@ -38,7 +38,7 @@ Feel free to delete the tmux-2.3 directory and the tmux-2.3.tar.gz file after fi
 
 ### Neovim
 
-Note that if you're using an older version of Ubuntu, there are additional steps you must perform. See [here](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu) for the full installation instructions.
+Note: if you're using an older version of Ubuntu, there are additional steps you must perform. See [here](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu) for the full installation instructions.
 
 ```
 sudo apt-get install software-properties-common
@@ -78,7 +78,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    wget https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh && . one-dark.sh
    ```
 
-   You may want to make a copy of the resulting Gnome Terminal profile and tweak the colors a bit to suit your liking.
+   You may want to make a copy of the resulting terminal profile and tweak the colors a bit to suit your liking.
 
 * [Powerline Fonts](https://github.com/powerline/fonts) (for the Powerline strips in Vim and Tmux)
 
@@ -87,8 +87,6 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    ```
 
    Note: while this will correct the incorrect/missing symbols problem, you may still need to explicitly download the specific Powerline fonts you wish to use.
-
-   For our case in particular, we like to use **Droid Sans Mono for Powerline Bold** (Size 10, and with bold text turned off in Terminal settings).
 
    To explicitly download and install certain fonts, just do the following:
 
@@ -100,17 +98,15 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    Then simply configure the terminal's settings to use the particular font you want.
 
+   For our case in particular, we like to use **Droid Sans Mono for Powerline Bold** (Size 10), and we also prefer to turn off "Allow bold text" in the terminal settings.
+
 ### Zsh
 
 * [Zgen](https://github.com/tarjoilija/zgen)
 
    ```
-   git clone https://github.com/tarjoilija/zgen.git "~/.zgen"
+   git clone https://github.com/tarjoilija/zgen.git ~/.zgen
    ```
-
-   Note that installing Oh-My-Zsh will override your current existing `.zshrc` file with the default one that Oh-My-Zsh comes with, so make sure to replace that with the one you have afterwards.
-
-   Also, make sure that the path to the Oh-My-Zsh installation in `.zshrc` is correct.
 
 * Tree
 
@@ -165,7 +161,9 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install clang
    ```
 
-   Ensure to update the paths to clang and libclang in the Deoplete-Clang configuration in `init.vim`.
+   Make sure to update the paths to clang and libclang in the Deoplete-Clang configuration in `init.vim`.
+
+   The best way to find out if Deoplete-Clang has been set up properly is to open a C/C++ file in vim and see if Deoplete-Clang complains with any errors.
 
 * ClangTidy (for Neomake)
 
@@ -173,7 +171,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    sudo apt-get install clang-tidy
    ```
 
-* Exuberant Ctags (for indexing language objects; useful for things like Go-to-Definition)
+* [Exuberant Ctags](https://github.com/jakedouglas/exuberant-ctags) (for indexing language objects; useful for things like Go-to-Definition)
 
    ```
    sudo apt-get install exuberant-ctags
