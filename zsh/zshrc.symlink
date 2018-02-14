@@ -9,10 +9,11 @@ zgen oh-my-zsh # Library for Oh-My-Zsh themes and plugins
 zgen oh-my-zsh plugins/tmux # Tmux integration
 zgen oh-my-zsh plugins/sudo # Quickly add 'sudo' to commands
 zgen oh-my-zsh plugins/colored-man-pages # Colorize man pages
-zgen load arzzen/calc.plugin.zsh # Calculator for the terminal
+zgen load arzzen/calc.plugin.zsh # Calculator for the shell
 zgen load Tarrasch/zsh-bd # Jump back directories more easily
 zgen load zsh-users/zsh-autosuggestions # As-you-type autosuggestions
 zgen load hlissner/zsh-autopair # Auto-close and delete matching delimiters
+zgen load zdharma/fast-syntax-highlighting # Syntax highlighting for the shell
 
 # Theme (must go after the Oh-My-Zsh library is loaded since this is an Oh-My-Zsh theme)
 source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
