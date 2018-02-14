@@ -60,7 +60,6 @@ Clone the repository, then create the appropriate symlinks for your dotfiles:
 ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
 ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
-ln -s ~/.dotfiles/ctags/ctags.symlink ~/.ctags
 ln -s ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
 ```
 
@@ -216,7 +215,3 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    To verify that your set-up works, try compiling this [sample LaTeX file](http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/TypicalInput.html).
 
    If you're trying (and failing) to compile an existing LaTeX project, you might be lacking some of the LaTeX packages it's using.
-
-* Scala Setup (optional)
-
-   Basic Dependencies: [JDK](https://stackoverflow.com/questions/14788345/how-to-install-jdk-on-ubuntu-linux), [SBT](http://www.scala-sbt.org/release/docs/Installing-sbt-on-Linux.html)

@@ -23,7 +23,6 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'majutsushi/tagbar' " Browse tags for the current file and get an overview of its structure
   Plugin 'lervag/vimtex' " LaTeX plugin
-  Plugin 'derekwyatt/vim-scala' " Scala bare essentials: syntax highlighting, file-type detection, import sorting, etc.
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
 
   call vundle#end()
