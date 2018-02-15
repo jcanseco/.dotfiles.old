@@ -21,8 +21,8 @@ source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 alias v="vim"
 alias vim="nvim"
 alias za="zathura --fork"
-alias tgz="tar -xvzf" # Unzip .tar.gz files
-alias exp="nemo ." # Open file explorer in current directory
+alias tgz="tar -xvzf"
+alias open="nemo"
 
 alias cd..="cd .."
 alias gti="git"
