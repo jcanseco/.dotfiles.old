@@ -52,6 +52,9 @@ alias mkdir="mkdir -p" # Automatically create intermediate non-existing director
 alias rl="source ~/.zshrc" # Reload the zsh configuration file
 alias rla="all 'source ~/.zshrc'"
 
+# Key Bindings
+bindkey '^ ' forward-word # Move cursor forward by word using 'Ctrl + Space'; useful for partial acceptance of autosuggestions
+
 # Options
 setopt CHASE_LINKS # Resolve symlinks when using cd
 
