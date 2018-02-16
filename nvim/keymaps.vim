@@ -47,7 +47,7 @@ nnoremap <Leader>r :e!<CR> :w<CR>
 " Go to most-recently-used buffer
 noremap <C-b> <C-^>
 
-" Open CtrlP line search, which will look for text matches in open buffers
+" Search for a string in the currently open buffers
 noremap <C-f> :CtrlPLine<CR>
 
 " Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
