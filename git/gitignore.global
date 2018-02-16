@@ -77,6 +77,8 @@ cscope.po.out
 Session.vim
 # temporary
 .netrwhist
+# CtrlP
+.ctrlp_root
 # auto-generated tag files
 
 
