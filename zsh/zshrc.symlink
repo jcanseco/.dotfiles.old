@@ -17,7 +17,6 @@ zgen load hlissner/zsh-autopair # Auto-close and delete matching delimiters
 source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 
 # Aliases
-alias v="vim"
 alias vim="nvim"
 alias za="zathura --fork"
 alias tgz="tar -xvzf"
@@ -60,6 +59,14 @@ setopt CHASE_LINKS # Resolve symlinks when using cd
 # Set-up zsh to automatically list directory contents whenever you change directories
 function chpwd() {
   ls
+}
+
+function v() {
+  if [[ $# == 0 ]]; then
+    vim .
+  else
+    vim $*
+  fi
 }
 
 # Search for files within the current directory whose filename contains a given string
