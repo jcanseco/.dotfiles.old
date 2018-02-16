@@ -29,7 +29,7 @@ alias igt="git"
 alias gt="git"
 alias got="git"
 
-alias vdot="vvr ~/.dotfiles"
+alias vdot="vim ~/.dotfiles"
 
 alias dot="cd ~/.dotfiles/"
 alias ws="cd ~/Workspace/"
@@ -60,26 +60,6 @@ setopt CHASE_LINKS # Resolve symlinks when using cd
 # Set-up zsh to automatically list directory contents whenever you change directories
 function chpwd() {
   ls
-}
-
-# Open all files in the given directories in vim, excluding directories
-# Usage: vv <directories> (defaults to current directory)
-function vv() {
-  local target_dirs=(${@:-"."})
-  local suffix="/*(.)"
-  local target_dirs_with_suffix=( ${target_dirs[@]/%/$suffix} )
-  local target_files=( $~target_dirs_with_suffix[@] )
-  vim $target_files
-}
-
-# Open all files recursively in the given directories in vim, excluding directories
-# Usage: vvr <directories> (defaults to current directory)
-function vvr() {
-  local target_dirs=(${@:-"."})
-  local suffix="/**/*(.)"
-  local target_dirs_with_suffix=( ${target_dirs[@]/%/$suffix} )
-  local target_files=( $~target_dirs_with_suffix[@] )
-  vim $target_files
 }
 
 # Search for files within the current directory whose filename contains a given string
