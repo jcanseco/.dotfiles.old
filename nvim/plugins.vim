@@ -48,7 +48,7 @@ imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR" " Create new li
 
 """ CtrlP
 let g:ctrlp_cmd='CtrlPMixed' " Set CtrlP to search files, most-recently-used and open buffers at the same time, but defaults to files (press Ctrl+B while the CtrlP window is open to cycle modes)
-let g:ctrlp_working_path_mode=0 " Use vim's current working directory, not the directory of the currently loaded file
+let g:ctrl_working_path_mode='ra' " CtrlP's working directory (see help pages for more info)
 let g:ctrlp_root_markers=['.ctrlp_root'] " If a .ctrlp_root exists anywhere between the open file and /, CtrlP will index from there instead
 let g:ctrlp_by_filename=1 " Search by filename, not filepath
 let g:ctrlp_max_files=30000
