@@ -2,7 +2,7 @@
 filetype off " Required by Vundle
 set runtimepath+=~/.vim/bundle/Vundle.vim " Add the Vundle installation to the runtime path
 if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
-  call vundle#begin('~/.config/nvim/bundle') " Download plugins into the specified path
+  call vundle#begin('~/.vim/bundle') " Download plugins into the specified path
 
   Plugin 'VundleVim/Vundle.vim' " Required for Vundle to work
   Plugin 'joshdick/onedark.vim' " One Dark theme
