@@ -20,10 +20,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Auto center on search match
-noremap n nzz
-noremap N Nzz
-
 " Prevent jumping to the next match when pressing '*'
 nnoremap * :keepjumps normal! mi*`i<CR>
 
