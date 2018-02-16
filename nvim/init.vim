@@ -58,9 +58,9 @@ set tabstop=4 " # of spaces used to visually represent the <TAB> character. So w
 set softtabstop=4 " # of spaces inserted when you hit tab in Insert mode, and the # of spaces deleted when you hit backspace on a tab
 set shiftwidth=4 " # of spaces to use for indent and unindent
 
-" Language-specific tab indentation
-autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+" Language-specific tab control
+autocmd Filetype c setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype cpp setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 
 """ Auto Commands
