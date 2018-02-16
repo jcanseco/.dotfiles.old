@@ -26,34 +26,34 @@ colorscheme onedark
 
 
 """ General
-set number " show current line number on the side bar
-set relativenumber " show numbers of other lines relative to the current line
-set noshowmode " disable the mode status at the bottom
-set showcmd " show last command executed at the bottom of screen
-set scrolloff=8 " keep 8 screen lines above/below the cursor if possible
-set ignorecase " ignore case when searching ...
+set number " Show current line number on the side bar
+set relativenumber " Show numbers of other lines relative to the current line
+set noshowmode " Disable the mode status at the bottom
+set showcmd " Show last command executed at the bottom of screen
+set scrolloff=8 " Keep 8 screen lines above/below the cursor if possible
+set ignorecase " Ignore case when searching ...
 set smartcase " ... unless search pattern contains upper case characters
-set smartindent " smart autoindenting when starting a new line
-set nowrap " don't wrap lines
-set linebreak " wrap long lines; don't break words
-set colorcolumn=81 " highlight the 81st column
+set smartindent " Smart autoindenting when starting a new line
+set nowrap " Don't wrap lines
+set linebreak " Wrap long lines; don't break words
+set colorcolumn=81 " Highlight the 81st column
 set mouse-=a " Disable mouse click to go to position
-set autoread " detect when a file is changed
-set list lcs=tab:\ \ " when cursor is on a tab char, go to beginning of tab, not end (Note: the space after the second \ is important)
-set hidden " allow for current buffer to be backgrounded
-set splitbelow " open files below the current window when doing a horizontal split
-set splitright " open files to the right of the current window when doing a vertical split
-set hlsearch " highlight search results
-set noswapfile " don't make swap files
-set formatoptions=croqlj " format options that are good for Google style. See :help fo-table
-set backspace=indent,eol,start " allow backspacing through autoindents, line-endings, and backwards through the start of an insertion
-set cursorline " highlight current line
-set wildmenu " show graphical list of suggestions that you can cycle through when you hit <TAB> while typing a command
-set incsearch " search as characters are entered
+set autoread " Detect when a file is changed
+set list lcs=tab:\ \ " When cursor is on a tab char, go to beginning of tab, not end (Note: the space after the second \ is important)
+set hidden " Allow for current buffer to be backgrounded
+set splitbelow " Open files below the current window when doing a horizontal split
+set splitright " Open files to the right of the current window when doing a vertical split
+set hlsearch " Highlight search results
+set noswapfile " Don't make swap files
+set formatoptions=croqlj " Format options that are good for Google style. See :help fo-table
+set backspace=indent,eol,start " Allow backspacing through autoindents, line-endings, and backwards through the start of an insertion
+set cursorline " Highlight current line
+set wildmenu " Show graphical list of suggestions that you can cycle through when you hit <TAB> while typing a command
+set incsearch " Search as characters are entered
 
 
 """ Tab Control
-set expandtab " replace tabs with spaces
+set expandtab " Replace tabs with spaces
 set tabstop=4 " # of spaces used to visually represent the <TAB> character. So when vim opens a file and sees a <TAB> char, it represents that with the given # of spaces
 set softtabstop=4 " # of spaces inserted when you hit tab in Insert mode, and the # of spaces deleted when you hit backspace on a tab
 set shiftwidth=4 " # of spaces to use for indent and unindent
@@ -64,38 +64,40 @@ autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 
 """ Auto Commands
-autocmd InsertEnter * :setlocal nohlsearch " toggle hl off when entering insert mode
-autocmd InsertLeave * :setlocal hlsearch " toggle hl back on when leaving insert mode
+autocmd InsertEnter * :setlocal nohlsearch " Toggle hl off when entering insert mode
+autocmd InsertLeave * :setlocal hlsearch " Toggle hl back on when leaving insert mode
 autocmd BufNewFile,BufEnter * silent! lcd %:p:h " Automatically change the working path to the path of the current file
 
 
 """ Airline
 set laststatus=2 " Show airline even if there are no splits
-set ttimeoutlen=10 "Eliminate delay when leaving Insert mode
+set ttimeoutlen=10 " Eliminate delay when leaving Insert mode
 let g:airline_powerline_fonts=1
 let g:airline_theme='onedark'
-let g:airline_skip_empty_sections=1 "remove angle at end of there is no warning
-let g:airline#extensions#tabline#enabled=1 " enable airline tabline
-let g:airline#extensions#tabline#tab_min_count=2 " only show tabline if tabs are being used (more than 1 tab open)
-let g:airline#extensions#tabline#show_buffers=0 " do not show open buffers in tabline
+let g:airline_skip_empty_sections=1 " Remove angle at end of there is no warning
+let g:airline#extensions#tabline#enabled=1 " Enable airline tabline
+let g:airline#extensions#tabline#tab_min_count=2 " Only show tabline if tabs are being used (more than 1 tab open)
+let g:airline#extensions#tabline#show_buffers=0 " Do not show open buffers in tabline
 let g:airline#extensions#tabline#show_splits=0
 
 
 """ DelimitMate
-imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR" " create new line and move cursor one tab into body when creating code block with braces
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
 
 
 """ CtrlP
-let g:ctrlp_cmd='CtrlPMixed' " set CtrlP to search files, most-recently-used and open buffers at the same time, but defaults to files (press Ctrl+B while the CtrlP window is open to cycle modes)
-let g:ctrlp_custom_ignore={
-  \ 'dir': '\.(git|svn|hg)$\|_site\|\.jsexe$\|node_modules$',
-  \ 'file': '\v\.(o|hi|js_o|js_hi|dyn_hi|dyn_o)',
-  \ } " ignore .git and other source control directories, node_modules, Jekyll _site dirs, .o and other binary files output by compilers, etc.
-let g:ctrlp_working_path_mode=0 " use vim's current working directory, not the directory of the currently loaded file
-let g:ctrlp_root_markers=['.ctrlp_root'] " if a .ctrlp_root exists anywhere between the open file and /, CtrlP will index from there instead
+let g:ctrlp_cmd='CtrlPMixed' " Set CtrlP to search files, most-recently-used and open buffers at the same time, but defaults to files (press Ctrl+B while the CtrlP window is open to cycle modes)
+let g:ctrlp_working_path_mode=0 " Use vim's current working directory, not the directory of the currently loaded file
+let g:ctrlp_root_markers=['.ctrlp_root'] " If a .ctrlp_root exists anywhere between the open file and /, CtrlP will index from there instead
 let g:ctrlp_max_files=30000
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_match_window='min:10,max10'
+
+" Ignore .git and other source control directories, node_modules, Jekyll _site dirs, .o and other binary files output by compilers, etc.
+let g:ctrlp_custom_ignore={
+  \ 'dir': '\.(git|svn|hg)$\|_site\|\.jsexe$\|node_modules$',
+  \ 'file': '\v\.(o|hi|js_o|js_hi|dyn_hi|dyn_o)',
+  \ }
 
 " Speed up indexing for CtrlP by using SilverSearcher
 let g:ctrlp_user_command = '/usr/bin/ag %s -i --nocolor --nogroup --hidden
