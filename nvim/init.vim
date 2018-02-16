@@ -59,14 +59,14 @@ set softtabstop=4 " # of spaces inserted when you hit tab in Insert mode, and th
 set shiftwidth=4 " # of spaces to use for indent and unindent
 
 " Language-specific tab control
-autocmd Filetype c setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd Filetype cpp setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd filetype c setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+autocmd filetype cpp setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 
 """ Auto Commands
-autocmd InsertEnter * :setlocal nohlsearch " Toggle hl off when entering insert mode
-autocmd InsertLeave * :setlocal hlsearch " Toggle hl back on when leaving insert mode
-autocmd BufNewFile,BufEnter * silent! lcd %:p:h " Automatically change the working path to the path of the current file
+autocmd insertenter * :setlocal nohlsearch " Toggle hl off when entering insert mode
+autocmd insertleave * :setlocal hlsearch " Toggle hl back on when leaving insert mode
+autocmd bufnewfile,bufenter * silent! lcd %:p:h " Automatically change the working path to the path of the current file
 
 
 filetype plugin indent on " Enable file type based indenting and syntax highlighting (Note: needs to be at the end)
