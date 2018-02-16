@@ -27,13 +27,6 @@ nnoremap * :keepjumps normal! mi*`i<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-" Highlight last inserted text
-nnoremap gV `[v`]
-
-" Insert newline before/after current line
-nnoremap [<Space> O<Esc>j
-nnoremap ]<Space> o<Esc>k
-
 " Remove all trailing whitespace using 'Leader + t'
 nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 
@@ -49,9 +42,6 @@ noremap <C-f> :CtrlPLine<CR>
 " Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
 inoremap <Silent><Expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <Silent><Expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Open and close Tagbar
-nnoremap <Leader>o :TagbarToggle<CR>
 
 " Toggle continuous compilation for LaTex docs
 nmap <Leader>ll <Plug>(vimtex-compile)

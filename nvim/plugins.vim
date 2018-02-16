@@ -20,7 +20,6 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
   Plugin 'benekastah/neomake' " Code linter
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
-  Plugin 'majutsushi/tagbar' " Browse tags for the current file and get an overview of its structure
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
 
