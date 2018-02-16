@@ -1,7 +1,7 @@
 # Plugins
 set -g @plugin 'tmux-plugins/tpm' # Plugin manager
 set -g @plugin 'tmux-plugins/tmux-sensible' # Basic tmux settings
-set -g @plugin 'odedlaz/tmux-onedark-theme' # One Dark theme
+set -g @plugin 'odedlaz/tmux-onedark-theme' # One Dark theme (color scheme + airline-like status bar)
 set -g @plugin 'christoomey/vim-tmux-navigator' # Seamlessly move between vim-splits and tmux panes
 
 # Override the TERM variable used by tmux to work well with the One Dark theme
