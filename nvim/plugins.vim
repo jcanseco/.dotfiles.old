@@ -1,6 +1,6 @@
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
+""" Plugins
+filetype off " Required by Vundle
+set runtimepath+=~/.vim/bundle/Vundle.vim " Add the Vundle installation to the runtime path
 if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   call vundle#begin('~/.config/nvim/bundle') " Download plugins into the specified path
 
@@ -28,8 +28,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
 else
   echomsg 'Error: Vundle not installed.'
 endif
-
-filetype plugin indent on
+filetype plugin indent on " Required by Vundle
 
 
 """ Airline
