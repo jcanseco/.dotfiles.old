@@ -39,7 +39,7 @@ nnoremap [<space> O<esc>j
 nnoremap ]<space> o<esc>k
 
 " Remove all trailing whitespace by pressing 'LEADER + t'
-nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 
 " Open CtrlP for switching between already-opened buffers
 noremap <C-b> :CtrlPBuffer<CR>
