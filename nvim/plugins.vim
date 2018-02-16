@@ -53,6 +53,7 @@ let g:ctrlp_root_markers=['.ctrlp_root'] " If a .ctrlp_root exists anywhere betw
 let g:ctrlp_by_filename=1 " Search by filename, not filepath
 let g:ctrlp_max_files=30000
 let g:ctrlp_follow_symlinks=1
+let g:ctrlp_use_caching=0
 let g:ctrlp_match_window='min:10,max10'
 
 " Ignore .git and other source control directories, node_modules, Jekyll _site dirs, .o and other binary files output by compilers, etc.
