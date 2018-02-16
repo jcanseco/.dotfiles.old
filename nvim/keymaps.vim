@@ -36,12 +36,12 @@ nnoremap <Leader>r :e!<CR> :w<CR>
 " Go to most-recently-used buffer
 noremap <C-b> <C-^>
 
-" Search for a given string in the currently open buffers using CltrP
+" Search for a given string in the currently open buffers using CtrlP
 noremap <C-f> :CtrlPLine<CR>
 
 " Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
-inoremap <Silent><Expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <Silent><Expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Toggle continuous compilation for LaTex docs
 nmap <Leader>ll <Plug>(vimtex-compile)
