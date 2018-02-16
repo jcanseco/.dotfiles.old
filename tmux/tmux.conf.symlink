@@ -67,6 +67,10 @@ bind -r C-j resize-pane -D 5
 bind -r C-k resize-pane -U 5
 bind -r C-l resize-pane -R 5
 
+# Move cursor on the shell forward/backward by word using 'Ctrl + (Left/Right)'
+bind -n C-Left send-keys M-b
+bind -n C-Right send-keys M-f
+
 # Toggle mouse mode on/off using 'PREFIX + w'
 bind w set-option -g mouse \; display "Mouse Mode #{?mouse,ON,OFF}"
 
