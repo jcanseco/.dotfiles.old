@@ -44,8 +44,8 @@ nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 " Refresh current buffer to match the saved state using 'Leader + r', and then save the file right after to remove the 'trailing whitespace' warning on airline.
 nnoremap <Leader>r :e!<CR> :w<CR>
 
-" Open CtrlP for switching between already-opened buffers
-noremap <C-b> :CtrlPBuffer<CR>
+" Go to most-recently-used buffer
+noremap <C-b> <C-^>
 
 " Open CtrlP line search, which will look for text matches in open buffers
 noremap <C-f> :CtrlPLine<CR>
