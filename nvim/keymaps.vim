@@ -35,10 +35,10 @@ vnoremap > >gv
 nnoremap gV `[v`]
 
 " Insert newline before/after current line
-nnoremap [<space> O<esc>j
-nnoremap ]<space> o<esc>k
+nnoremap [<Space> O<Esc>j
+nnoremap ]<Space> o<Esc>k
 
-" Remove all trailing whitespace using 'LEADER + t'
+" Remove all trailing whitespace using 'Leader + t'
 nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 
 " Open CtrlP for switching between already-opened buffers
@@ -48,23 +48,23 @@ noremap <C-b> :CtrlPBuffer<CR>
 noremap <C-f> :CtrlPLine<CR>
 
 " Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
-inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+inoremap <Silent><Expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <Silent><Expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Open and close Tagbar
 nnoremap <Leader>o :TagbarToggle<CR>
 
 " Toggle continuous compilation for LaTex docs
-nmap <Leader>ll <plug>(vimtex-compile)
+nmap <Leader>ll <Plug>(vimtex-compile)
 
 " View LaTeX doc on a PDF viewer
-nmap <Leader>lv <plug>(vimtex-view)
+nmap <Leader>lv <Plug>(vimtex-view)
 
 " View LaTeX compiler output (detailed)
-nmap <Leader>lo <plug>(vimtex-compile-output)
+nmap <Leader>lo <Plug>(vimtex-compile-output)
 
 " View LaTeX compilation errors
-nmap <Leader>le <plug>(vimtex-errors)
+nmap <Leader>le <Plug>(vimtex-errors)
 
 " Clean up temporary LaTeX compiler output files
-nmap <Leader>lc <plug>(vimtex-clean-full)
+nmap <Leader>lc <Plug>(vimtex-clean-full)
