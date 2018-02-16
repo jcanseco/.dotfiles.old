@@ -43,7 +43,7 @@ let g:airline#extensions#tabline#show_splits=0
 
 
 """ DelimitMate
-imap <Expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
+imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
 
 
 """ CtrlP
