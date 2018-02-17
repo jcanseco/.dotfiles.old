@@ -16,6 +16,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
   Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
   Plugin 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
+  Plugin 'lokikl/vim-ctrlp-ag' " CtrlP extension; search for strings throughout a project using Ag
   Plugin 'tacahiroy/ctrlp-funky' " CtrlP extension; search for function definitions in the current file without using tags
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
@@ -77,7 +78,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 
-""" CtrlP Tjump
+""" CtrlP-Tjump
 let g:ctrlp_tjump_only_silent=1 " Go to tag directly if there is only one tag found without opening the CtrlP window
 let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in the CtrlP window
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath

@@ -36,10 +36,14 @@ nnoremap <Leader>r :e!<CR> :w<CR>
 " Go to most-recently-used buffer
 nnoremap <C-b> <C-^>
 
-" Search for function definitions in the current file using CtrlP
+" Search for strings throughout a project using CtrlP-Ag via the 'Ag' or 'ag' command
+command -nargs=1 Ag CtrlPagLocate <Args>
+cnoreabbrev ag Ag
+
+" Search for function definitions in the current file using CtrlP-Funky
 nnoremap <C-f> :CtrlPFunky<CR>
 
-" Search for tags of the symbol under the cursor using CtrlP Tjump
+" Search for tags of the symbol under the cursor using CtrlP-Tjump
 nnoremap <C-]> :CtrlPtjump<CR>
 vnoremap <C-]> :CtrlPtjumpVisual<CR>
 
