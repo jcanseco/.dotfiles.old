@@ -37,6 +37,7 @@
     co = checkout
     cob = checkout -b
     f = fetch
+    pl = pull
     pr = pull --rebase
     ps = push
     cp = cherry-pick
