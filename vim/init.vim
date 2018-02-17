@@ -69,5 +69,11 @@ autocmd insertleave * :setlocal hlsearch " Toggle hl back on when leaving insert
 autocmd bufnewfile,bufenter * silent! lcd %:p:h " Automatically change the working path to the path of the current file
 
 
+""" Netrw
+let g:netrw_banner=0 " Remove the top-banner information
+let g:netrw_liststyle=1 " Show the file size and timestamp information right beside each entry
+let g:netrw_sizestyle="H" " Use human-readable format for file size information
+
+
 filetype plugin indent on " Enable file type based indenting and syntax highlighting (Note: needs to be at the end)
 syntax on
