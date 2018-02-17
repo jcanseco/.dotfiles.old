@@ -22,8 +22,8 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
-  Plugin 'shougo/deoplete.nvim' " Auto-completion
-  Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
+  " Plugin 'shougo/deoplete.nvim' " Auto-completion
+  " Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
   Plugin 'benekastah/neomake' " Code linter
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics

@@ -17,7 +17,6 @@ zgen load hlissner/zsh-autopair # Auto-close and delete matching delimiters
 source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 
 # Aliases
-alias vim="nvim"
 alias za="zathura --fork"
 alias tgz="tar -xvzf"
 alias open="nemo"

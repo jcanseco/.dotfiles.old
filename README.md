@@ -17,7 +17,7 @@ Set Zsh as the default shell
 chsh -s $(which zsh)
 ```
 
-### Tmux (v2.3)
+### Tmux
 
 Note: we require at least v2.3 for true color support.
 
@@ -36,19 +36,19 @@ sudo make install
 
 Feel free to delete the tmux-2.3 directory and the tmux-2.3.tar.gz file after finishing installation.
 
-### Neovim
+### Vim
 
-Note: if you're using an older version of Ubuntu, there are additional steps you must perform. See [here](https://github.com/neovim/neovim/wiki/Installing-Neovim#ubuntu) for the full installation instructions.
+Note: we require at least Vim 8 to use some of the plugins.
 
 ```
-sudo apt-get install software-properties-common
-
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository ppa:jonathonf/vim
 sudo apt-get update
-sudo apt-get install neovim
-
-sudo apt-get install python-dev python-pip python3-dev python3-pip
+sudo apt-get install vim
 ```
+
+Make sure to open `vim` at least once to check that the correct version (Vim 8) has been installed.
+
+We also need Vim 8 to have Python 3 support. Open `vim` and run `:echo has('python3')`; it should display 1 if true.
 
 ## Set up the Home Directory
 
@@ -59,8 +59,8 @@ Clone the repository, then create the appropriate symlinks for your dotfiles:
 ```
 ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
+ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
 ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
-ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
 ```
 
 ### Directories
@@ -140,19 +140,16 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    Invoke `:PluginInstall` while in Vim to install plugins.
 
-* Python3 Interface for Neovim (for Deoplete)
+* Python3 Interface (for Deoplete)
 
    ```
    pip3 install neovim
-   ```
-
-   If Deoplete was installed prior to Python support being added to Neovim, invoke `:UpdateRemotePlugins`.
-
-* Neovim remote client for Python (for Deoplete-Clang)
-
-   ```
    pip3 install --upgrade neovim
    ```
+
+   Yes, even though we're using Vim 8, we will still need to install the Python 3 interface for Neovim.
+
+   If Deoplete was installed prior to Python support being added to Neovim, invoke `:UpdateRemotePlugins`.
 
 * Clang and Libclang (for Deoplete-Clang and Neomake)
 
