@@ -40,7 +40,7 @@ nnoremap <C-b> <C-^>
 command -nargs=1 Ag CtrlPagLocate <Args>
 cnoreabbrev ag Ag
 
-" Search for function definitions in the current file using CtrlP-Funky
+" Search for class and function definitions in the current file using CtrlP-Funky
 nnoremap <C-f> :CtrlPFunky<CR>
 
 " Search for tags of the symbol under the cursor using CtrlP-Tjump
