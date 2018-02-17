@@ -58,13 +58,13 @@ function chpwd() {
   ls
 }
 
-# Convenience function used to open the current directory in vim by default if no args are supplied
+# Convenience function; open the current directory in vim if no args are supplied
 # Otherwise, the args are opened normally just like in the regular 'vim' command
 function v() {
   if [[ $# == 0 ]]; then
     vim .
   else
-    vim $*
+    vim $@
   fi
 }
 
