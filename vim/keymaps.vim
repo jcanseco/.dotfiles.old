@@ -34,10 +34,10 @@ nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 nnoremap <Leader>r :e!<CR> :w<CR>
 
 " Go to most-recently-used buffer
-noremap <C-b> <C-^>
+nnoremap <C-b> <C-^>
 
-" Search for a given string in the currently open buffers using CtrlP
-noremap <C-f> :CtrlPLine<CR>
+" Search for function definitions in the current file using CtrlP
+nnoremap <C-f> :CtrlPFunky<CR>
 
 " Search for tags of the symbol under the cursor using CtrlP Tjump
 nnoremap <C-]> :CtrlPtjump<CR>

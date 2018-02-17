@@ -16,7 +16,8 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
   Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
   Plugin 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
-  Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags
+  Plugin 'tacahiroy/ctrlp-funky' " CtrlP extension; search for function definitions in the current file without using tags
+  Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'shougo/deoplete.nvim' " Auto-completion
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
