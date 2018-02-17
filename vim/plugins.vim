@@ -62,7 +62,7 @@ let g:ctrlp_custom_ignore={
   \ }
 
 " Speed up indexing for CtrlP by using SilverSearcher
-let g:ctrlp_user_command = '/usr/bin/ag %s -i --nocolor --nogroup --hidden
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
   \ --ignore .git
   \ --ignore .svn
   \ --ignore .hg
