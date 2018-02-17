@@ -60,7 +60,7 @@ Clone the repository, then create the appropriate symlinks for your dotfiles:
 ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
 ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
-ln -s ~/.dotfiles/nvim/init.vim ~/.config/nvim/init.vim
+ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim
 ```
 
 ### Directories

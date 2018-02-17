@@ -2,8 +2,8 @@ set nocompatible " Enable modern Vim features not compatible with Vi spec (Note:
 
 
 """ Dependencies
-source ~/.dotfiles/nvim/plugins.vim
-source ~/.dotfiles/nvim/keymaps.vim
+source ~/.dotfiles/vim/plugins.vim
+source ~/.dotfiles/vim/keymaps.vim
 
 
 """ Colors
