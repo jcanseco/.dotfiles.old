@@ -5,6 +5,7 @@ set -g @plugin 'odedlaz/tmux-onedark-theme' # One Dark theme (color scheme + air
 set -g @plugin 'christoomey/vim-tmux-navigator' # Seamlessly move between vim-splits and tmux panes
 
 # Override the TERM variable used by tmux to work well with the One Dark theme
+set -g default-terminal xterm-256color
 set -ga terminal-overrides ",xterm-256color:Tc"
 
 # Date format on status bar (for One Dark theme)
