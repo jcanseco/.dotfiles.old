@@ -16,10 +16,11 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
   Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
   Plugin 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
+  Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags
+  Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'shougo/deoplete.nvim' " Auto-completion
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
   Plugin 'benekastah/neomake' " Code linter
-  Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
 
@@ -73,6 +74,12 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 
 " Speed up matching for CtrlP by using a custom matcher
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+
+""" CtrlP Tjump
+let g:ctrlp_tjump_only_silent=1 " Go to tag directly if there is only one tag found without opening the CtrlP window
+let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in the CtrlP window
+let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
 
 
 """ Deoplete

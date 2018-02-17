@@ -39,6 +39,10 @@ noremap <C-b> <C-^>
 " Search for a given string in the currently open buffers using CtrlP
 noremap <C-f> :CtrlPLine<CR>
 
+" Search for tags of the symbol under the cursor using CtrlP Tjump
+nnoremap <C-]> :CtrlPtjump<CR>
+vnoremap <C-]> :CtrlPtjumpVisual<CR>
+
 " Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
 inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
