@@ -1,6 +1,6 @@
 # Set-up
 
-Note: the following set-up instructions assume that you are working on a machine with Ubuntu 16.04 (Xenial). If you're using a different distro, use this as a guideline only, and search up the instructions relevant to your distro at each step.
+The following set-up instructions assume that you are working on a machine with Ubuntu 16.04 (Xenial). If you're using a different distro, use this as a guideline only, and search up the instructions relevant to your distro at each step.
 
 ## Install the Main Tools
 
@@ -57,10 +57,10 @@ We also need Vim 8 to have Python 3 support (for Deoplete). Open `vim` and run `
 Clone the repository, then create the appropriate symlinks for your dotfiles:
 
 ```
-ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
-ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
-ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
-ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
+ln -sf ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
+ln -sf ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
+ln -sf ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
+ln -sf ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
 ```
 
 ### Directories
@@ -140,7 +140,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
    Invoke `:PluginInstall` while in Vim to install plugins.
 
-* Python3 Interface (for Deoplete)
+* Python 3 Interface (for Deoplete)
 
    ```
    pip3 install neovim
