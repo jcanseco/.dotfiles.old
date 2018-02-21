@@ -48,7 +48,7 @@ sudo apt-get install vim
 
 Make sure to open `vim` at least once to check that the correct version (Vim 8) has been installed.
 
-We also need Vim 8 to have Python 3 support. Open `vim` and run `:echo has('python3')`; it should display 1 if true.
+We also need Vim 8 to have Python 3 support (for Deoplete). Open `vim` and run `:echo has('python3')`; it should display 1 if true.
 
 ## Set up the Home Directory
 
@@ -148,8 +148,6 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    ```
 
    Yes, even though we're using Vim 8, we will still need to install the Python 3 interface for Neovim.
-
-   If Deoplete was installed prior to Python support being added to Neovim, invoke `:UpdateRemotePlugins`.
 
 * Clang and Libclang (for Deoplete-Clang and Neomake)
 
