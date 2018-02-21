@@ -20,6 +20,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function definitions in the current file without using tags
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
+  Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
   Plugin 'shougo/deoplete.nvim' " Auto-completion
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
   Plugin 'benekastah/neomake' " Code linter
@@ -83,6 +84,10 @@ let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_tjump_only_silent=1 " Go to tag directly if there is only one tag found without opening the CtrlP window
 let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in the CtrlP window
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
+
+
+""" Vim-Bookmarks
+let g:bookmark_sign = '> '
 
 
 """ Deoplete
