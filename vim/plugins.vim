@@ -14,6 +14,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'tpope/vim-commentary' " Comment stuff out
   Plugin 'sheerun/vim-polyglot' " Better syntax highlighting for various languages
   Plugin 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
+  Plugin 'jeetsukumaran/vim-filebeagle' " File browser
   Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
   Plugin 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
   Plugin 'lokikl/vim-ctrlp-ag' " CtrlP extension; search for strings throughout a project using Ag
@@ -49,6 +50,11 @@ let g:airline#extensions#tabline#show_splits=0
 
 """ DelimitMate
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
+
+
+""" FileBeagle
+let g:filebeagle_suppress_keymaps = 1
+let g:filebeagle_show_line_relativenumbers = 1
 
 
 """ CtrlP

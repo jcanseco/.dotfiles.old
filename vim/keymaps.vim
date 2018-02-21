@@ -36,6 +36,9 @@ nnoremap <Leader>r :e!<CR> :w<CR>
 " Go to most-recently-used buffer
 nnoremap <C-b> <C-^>
 
+" Open the file browser
+nnoremap <Leader>f :FileBeagle<CR>
+
 " Search for strings throughout a project using CtrlP-Ag via the 'Ag' or 'ag' command
 command -nargs=1 Ag ProjectRootExe CtrlPagLocate <Args>
 cnoreabbrev ag Ag
