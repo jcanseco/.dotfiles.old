@@ -86,7 +86,7 @@ function mkql() {
 
 # Execute a command in all tmux panes
 # Usage: all <command>
-# Warning: does not work very well if you have vim open in one of the panes; it'll just type out the command letter by letter in vim
+# Warning: does not work if you have a program running in one of the panes; it'll just type out the command letter by letter
 function all() {
   local cmd="$*"
   local active_pane_id=$TMUX_PANE
@@ -101,5 +101,5 @@ function all() {
   # Execute the command in the active pane (i.e. the pane executing this function) last.
   # This is because a command may involve termination of the pane, and we don't want to
   # terminate the active pane before it could send out the command to other panes.
-  eval $cmd
+  $cmd
 }
