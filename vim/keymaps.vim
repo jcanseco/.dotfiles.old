@@ -37,7 +37,7 @@ nnoremap <Leader>r :e!<CR> :w<CR>
 nnoremap <C-b> <C-^>
 
 " Search for strings throughout a project using CtrlP-Ag via the 'Ag' or 'ag' command
-command -nargs=1 Ag CtrlPagLocate <Args>
+command -nargs=1 Ag ProjectRootExe CtrlPagLocate <Args>
 cnoreabbrev ag Ag
 
 " Search for class and function definitions in the current file using CtrlP-Funky

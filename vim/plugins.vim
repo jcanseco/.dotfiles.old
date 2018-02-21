@@ -24,6 +24,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
   Plugin 'benekastah/neomake' " Code linter
   Plugin 'lervag/vimtex' " LaTeX plugin
+  Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
 
   call vundle#end()
