@@ -33,8 +33,9 @@ nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
 " Refresh current buffer to match the saved state using 'Leader + r', and then save the file right after to remove the 'trailing whitespace' warning on airline.
 nnoremap <Leader>r :e!<CR> :w<CR>
 
-" Go to most-recently-used buffer
-nnoremap <C-b> <C-^>
+" Go back and forth between recently visited buffers
+nnoremap <C-b> :bprev<CR>
+nnoremap <C-n> :bnext<CR>
 
 " Open the file browser
 nnoremap <Leader>f :FileBeagle<CR>
