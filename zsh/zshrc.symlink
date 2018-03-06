@@ -101,5 +101,5 @@ function all() {
   # Execute the command in the active pane (i.e. the pane executing this function) last.
   # This is because a command may involve termination of the pane, and we don't want to
   # terminate the active pane before it could send out the command to other panes.
-  $cmd
+  eval $cmd
 }
