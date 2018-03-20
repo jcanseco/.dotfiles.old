@@ -23,6 +23,9 @@ nnoremap <C-l> <C-w>l
 " Prevent jumping to the next match when pressing '*'
 nnoremap * :keepjumps normal! mi*`i<CR>
 
+" Disable highlights using 'Leader + d'
+nnoremap <Leader>d :noh<CR>
+
 " Align blocks of text and keep them selected
 vnoremap < <gv
 vnoremap > >gv
