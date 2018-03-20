@@ -11,11 +11,11 @@
     # Show whole commit tree
     lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
 
-    # git pushnew <branchname>; push untracked local branch to remote
-    pushnew = push --set-upstream origin
+    # git psu <branchname>; push untracked local branch to remote
+    psu = push --set-upstream origin
 
-    # git pushdel <branchname>; delete branch from remote
-    pushdel = push --delete origin
+    # git psd <branchname>; delete branch from remote
+    psd = push --delete origin
 
     # git cof <file.txt>; reset a particular file back to HEAD
     cof = checkout --
