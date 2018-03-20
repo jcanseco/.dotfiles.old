@@ -11,6 +11,9 @@
     # Show whole commit tree
     lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
 
+    # Show whole commit tree (simplified; shows a more compact version of the overall branching history)
+    lolas = log --pretty=oneline --abbrev-commit --graph --decorate --simplify-by-decoration --all
+
     # git psu <branchname>; push untracked local branch to remote
     psu = push --set-upstream origin
 
