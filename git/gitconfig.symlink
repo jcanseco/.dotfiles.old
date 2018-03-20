@@ -33,6 +33,8 @@
     ci = commit
     cim = commit -m
     amd = commit --amend
+    ss = stash
+    ssp = stash pop
     br = branch
     co = checkout
     cob = checkout -b
