@@ -51,12 +51,13 @@ alias rl="source ~/.zshrc" # Reload the zsh configuration file
 alias rla="all 'source ~/.zshrc'"
 
 # Key Bindings
-bindkey "^p" autosuggest-accept # Accept suggestions by zsh-autosuggestions using 'Ctrl + p'
+bindkey "^p" up-line-or-search # Set 'Ctrl + p' to behave like the up-arrow
+bindkey "^n" down-line-or-search # Set 'Ctrl + n' to behave like the down-arrow
 
 # Options
 setopt CHASE_LINKS # Resolve symlinks when using cd
 
-# Set-up zsh to automatically list directory contents whenever you change directories
+# Set zsh to automatically list directory contents whenever you change directories
 function chpwd() {
   ls
 }
