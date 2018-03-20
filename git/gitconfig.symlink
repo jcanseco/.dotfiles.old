@@ -44,6 +44,8 @@
     cpa = cherry-pick --abort
     rb = rebase
     rbi = rebase -i
+    rbc = rebase --continue
+    rba = rebase --abort
     r = reset
     rh = ! bash ~/.dotfiles/git/scripts/git_reset_hard.sh
 [core]
