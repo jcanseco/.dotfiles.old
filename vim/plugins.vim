@@ -98,6 +98,7 @@ let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each matc
 
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
+let g:bookmark_no_default_key_mappings = 1
 
 
 """ Deoplete
