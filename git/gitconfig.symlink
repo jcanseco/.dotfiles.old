@@ -15,7 +15,7 @@
     pushnew = push --set-upstream origin
 
     # git pushdel <branchname>; delete branch from remote
-    pushdel = push --delete origin # delete branch from remote
+    pushdel = push --delete origin
 
     # git cof <file.txt>; reset a particular file back to HEAD
     cof = checkout --
