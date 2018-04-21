@@ -57,10 +57,10 @@ We also need Vim 8 to have Python 3 support (for Deoplete). Open `vim` and run `
 Clone the repository, then create the appropriate symlinks for your dotfiles:
 
 ```
-ln -sf ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
-ln -sf ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
-ln -sf ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
-ln -sf ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
+ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/.dotfiles/git/gitconfig ~/.gitconfig
 ```
 
 ### Directories
