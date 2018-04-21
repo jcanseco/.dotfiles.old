@@ -63,5 +63,10 @@
     default = simple
 [color]
     ui = true
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
 [log]
     decorate = auto
