@@ -40,6 +40,7 @@ alias cl="clear"
 alias cla="all 'clear'"
 
 alias q="exit"
+alias qq="exit"
 alias qa="all 'exit'"
 
 alias ls="ls --color=auto --group-directories-first"
