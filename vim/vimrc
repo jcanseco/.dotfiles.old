@@ -27,7 +27,6 @@ colorscheme onedark
 
 """ General
 set number " Show current line number on the side bar
-set relativenumber " Show numbers of other lines relative to the current line
 set noshowmode " Disable the mode status at the bottom
 set showcmd " Show last command executed at the bottom of screen
 set scrolloff=8 " Keep 8 screen lines above/below the cursor if possible
