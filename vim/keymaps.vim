@@ -43,10 +43,6 @@ nnoremap <C-n> :bnext<CR>
 " Open the file browser
 nnoremap <Leader>f :FileBeagle<CR>
 
-" Search for strings throughout a project using CtrlP-Ag via the 'Ag' or 'ag' command
-command -nargs=1 Ag ProjectRootExe CtrlPagLocate <Args>
-cnoreabbrev ag Ag
-
 " Search for class and function definitions in the current file using CtrlP-Funky
 nnoremap <C-f> :CtrlPFunky<CR>
 
@@ -62,7 +58,3 @@ nnoremap mc :BookmarkClear<CR>
 
 " Show all bookmarks (vim-bookmarks)
 nnoremap ma :BookmarkShowAll<CR>
-
-" Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
-inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
