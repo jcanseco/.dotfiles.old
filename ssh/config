@@ -1,0 +1,14 @@
+# The main ecelinux server you use. Has some handy tools installed.
+# Can be accessed directly if you're on the University network.
+Host 3
+    Hostname ecelinux3.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
+
+# The entry-point server. Used to access other ecelinux servers from
+# outside the University network.
+Host 4
+    Hostname ecelinux4.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
+
