@@ -1,7 +1,7 @@
 # Robbyrussell Theme from Oh-My-Zsh; modified to fix bug with Zsh plugin managers which prevents the status arrow from being displayed
 # For more info see: https://github.com/zplug/zplug/issues/95
 ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
+PROMPT='%{$fg[cyan]%}(ece)%{$reset_color%} ${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
