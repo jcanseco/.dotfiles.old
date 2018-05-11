@@ -22,11 +22,6 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
-  Plugin 'shougo/deoplete.nvim' " Auto-completion
-  Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
-  Plugin 'roxma/nvim-yarp' " Remote plugin framework; required by Deoplete to work on Vim 8
-  Plugin 'roxma/vim-hug-neovim-rpc' " Compatibility layer for Neovim RPC; required by Deoplete to work on Vim 8
-  Plugin 'benekastah/neomake' " Code linter
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
@@ -99,44 +94,6 @@ let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each matc
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
-
-
-""" Deoplete
-let g:deoplete#enable_at_startup = 1
-
-" Required fields for Deoplete-Clang (see Deoplete-Clang GitHub page for info)
-let g:deoplete#sources#clang#libclang_path = "/usr/lib/llvm-3.8/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header = "/usr/include/clang/"
-
-" Automatically close the Scratch (i.e Preview) window
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-
-""" Neomake
-autocmd! BufWritePost * Neomake " Run Neomake every time the file is saved
-
-let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
-let g:neomake_cpp_clang_maker = {
-            \ 'args': ['-fsyntax-only', '-std=c++11', '-Wall', '-Wextra'],
-            \ 'errorformat':
-            \ '%-G%f:%s:,' .
-            \ '%f:%l:%c: %trror: %m,' .
-            \ '%f:%l:%c: %tarning: %m,' .
-            \ '%f:%l:%c: %m,'.
-            \ '%f:%l: %trror: %m,'.
-            \ '%f:%l: %tarning: %m,'.
-            \ '%f:%l: %m',
-            \ }
-let g:neomake_cpp_clangtidy_maker = {
-            \ 'exe': 'clang-tidy',
-            \ 'args': ['--checks="modernize-*,readability-*,misc-*,clang-analyzer-*"'],
-            \ 'errorformat':
-            \ '%E%f:%l:%c: fatal error: %m,' .
-            \ '%E%f:%l:%c: error: %m,' .
-            \ '%W%f:%l:%c: warning: %m,' .
-            \ '%-G%\m%\%%(LLVM ERROR:%\|No compilation database found%\)%\@!%.%#,' .
-            \ '%E%m',
-            \ }
 
 
 """ VimTeX
