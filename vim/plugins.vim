@@ -71,16 +71,6 @@ let g:ctrlp_custom_ignore={
   \ 'file': '\v\.(o|hi|js_o|js_hi|dyn_hi|dyn_o)',
   \ }
 
-" Speed up indexing for CtrlP by using SilverSearcher
-let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ --ignore review
-  \ -g ""'
-
 " Speed up matching for CtrlP by using a custom matcher
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
