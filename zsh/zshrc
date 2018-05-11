@@ -28,7 +28,7 @@ alias igt="git"
 alias gt="git"
 alias got="git"
 
-alias vdot="vim ~/.dotfiles"
+alias vdot="vim ~/.dotfiles/README.md"
 
 alias dot="cd ~/.dotfiles/"
 alias ws="cd ~/Workspace/"
@@ -67,7 +67,7 @@ function chpwd() {
 # Otherwise, the args are opened normally just like in the regular 'vim' command
 function v() {
   if [[ $# == 0 ]]; then
-    vim .
+    echo "Opening current directory in vim disabled due to bugs with using vim in ecelinux."
   else
     vim $@
   fi
