@@ -20,7 +20,6 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'lokikl/vim-ctrlp-ag' " CtrlP extension; search for strings throughout a project using Ag
   Plugin 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function definitions in the current file without using tags
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
-  Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
