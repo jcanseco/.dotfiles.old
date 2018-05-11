@@ -66,18 +66,3 @@ nnoremap ma :BookmarkShowAll<CR>
 " Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
 inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Toggle continuous compilation for LaTex docs
-nmap <Leader>ll <Plug>(vimtex-compile)
-
-" View LaTeX doc on a PDF viewer
-nmap <Leader>lv <Plug>(vimtex-view)
-
-" View LaTeX compiler output (detailed)
-nmap <Leader>lo <Plug>(vimtex-compile-output)
-
-" View LaTeX compilation errors
-nmap <Leader>le <Plug>(vimtex-errors)
-
-" Clean up temporary LaTeX compiler output files
-nmap <Leader>lc <Plug>(vimtex-clean-full)

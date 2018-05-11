@@ -84,8 +84,3 @@ let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each matc
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
-
-
-""" VimTeX
-let g:vimtex_view_method = 'zathura' " Set the default PDF viewer
-let g:vimtex_quickfix_latexlog = {'fix_paths' : 0} " Fixes bug with NeoVim support which prevents the opening of the error window
