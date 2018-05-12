@@ -142,6 +142,7 @@ let g:neomake_cpp_clangtidy_maker = {
 """ VimTeX
 let g:vimtex_view_method = 'zathura' " Set the default PDF viewer
 let g:vimtex_quickfix_latexlog = {'fix_paths' : 0} " Fixes bug with NeoVim support which prevents the opening of the error window
+let g:vimtex_compiler_latexmk = {'callback' : 0} " Disable compiler callback (used for displaying errors when performing background compilations) since 'clientserver' is not supported in most vim distributions
 
 """ Vim-Polyglot
 let g:polyglot_disabled = ['latex']
