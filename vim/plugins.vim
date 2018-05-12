@@ -67,7 +67,6 @@ let g:ctrlp_root_markers=['.ctrlp_root'] " CtrlP root marker; marks the project 
 let g:ctrlp_switch_buffer=0 " Open file in current split even if it's already opened somewhere else (another split, window, etc.)
 let g:ctrlp_max_files=30000
 let g:ctrlp_follow_symlinks=1
-let g:ctrlp_use_caching=0
 let g:ctrlp_match_window='min:10,max10'
 
 " Ignore .git and other source control directories, node_modules, Jekyll _site dirs, .o and other binary files output by compilers, etc.
