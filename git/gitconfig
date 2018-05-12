@@ -1,6 +1,6 @@
 [user]
     name = Jazel Canseco
-    email = jazel.canseco@gmail.com
+    email = jcanseco@uwaterloo.ca
 [alias]
     # Show a list of git aliases currently set up
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | less
