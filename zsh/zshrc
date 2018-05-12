@@ -51,6 +51,9 @@ alias mkdir="mkdir -p" # Automatically create intermediate non-existing director
 alias rl="source ~/.zshrc" # Reload the zsh configuration file
 alias rla="all 'source ~/.zshrc'"
 
+alias ece="cd ~/Workspace/ecelinux"
+alias sfs="sshfs jcanseco@ecelinux3.uwaterloo.ca:/home/jcanseco ~/Workspace/ecelinux" # Note: only works if you're on the university network
+
 # Key Bindings
 bindkey "^p" up-line-or-search # Set 'Ctrl + p' to behave like the up-arrow
 bindkey "^n" down-line-or-search # Set 'Ctrl + n' to behave like the down-arrow
