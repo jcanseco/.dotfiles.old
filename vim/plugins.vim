@@ -142,3 +142,6 @@ let g:neomake_cpp_clangtidy_maker = {
 """ VimTeX
 let g:vimtex_view_method = 'zathura' " Set the default PDF viewer
 let g:vimtex_quickfix_latexlog = {'fix_paths' : 0} " Fixes bug with NeoVim support which prevents the opening of the error window
+
+""" Vim-Polyglot
+let g:polyglot_disabled = ['latex']
