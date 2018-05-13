@@ -129,7 +129,7 @@ let g:neomake_cpp_clang_maker = {
             \ }
 let g:neomake_cpp_clangtidy_maker = {
             \ 'exe': 'clang-tidy',
-            \ 'args': ['--checks="modernize-*,readability-*,misc-*,clang-analyzer-*"'],
+            \ 'args': ['-extra-arg=-std=c++11', '-checks="modernize-*,readability-*,misc-*,clang-analyzer-*"'],
             \ 'errorformat':
             \ '%E%f:%l:%c: fatal error: %m,' .
             \ '%E%f:%l:%c: error: %m,' .
