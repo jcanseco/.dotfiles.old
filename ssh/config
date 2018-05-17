@@ -12,3 +12,7 @@ Host 4
     User jcanseco
     ForwardAgent yes
 
+Host 5
+    Hostname ecelinux5.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
