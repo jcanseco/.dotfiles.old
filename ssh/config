@@ -1,3 +1,8 @@
+Host 2
+    Hostname ecelinux2.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
+
 # The main ecelinux server you use. Has some handy tools installed.
 # Can be accessed directly if you're on the University network.
 Host 3
@@ -14,5 +19,15 @@ Host 4
 
 Host 5
     Hostname ecelinux5.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
+
+Host 6
+    Hostname ecelinux6.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
+
+Host 7
+    Hostname ecelinux7.uwaterloo.ca
     User jcanseco
     ForwardAgent yes
