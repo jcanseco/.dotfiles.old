@@ -15,7 +15,7 @@
     lolas = log --pretty=oneline --abbrev-commit --graph --decorate --simplify-by-decoration --all
 
     # git psu <branchname>; push untracked local branch to remote
-    psu = push --set-upstream origin
+    psu = push -u origin
 
     # git psd <branchname>; delete branch from remote
     psd = push --delete origin
