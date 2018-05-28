@@ -31,3 +31,8 @@ Host 7
     Hostname ecelinux7.uwaterloo.ca
     User jcanseco
     ForwardAgent yes
+
+Host 8
+    Hostname ecelinux7.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
