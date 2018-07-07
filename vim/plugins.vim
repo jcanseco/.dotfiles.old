@@ -57,7 +57,6 @@ imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new li
 """ FileBeagle
 let g:filebeagle_suppress_keymaps = 1
 let g:filebeagle_show_hidden = 1
-let g:filebeagle_show_line_relativenumbers = 1
 
 
 """ CtrlP
