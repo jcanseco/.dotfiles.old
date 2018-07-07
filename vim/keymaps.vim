@@ -1,6 +1,10 @@
 " Set the Leader key
 let mapleader=','
 
+" Save and Save All
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>sa :wa<CR>
+
 " Like 'C' and 'D', yank from cursor to end of line
 nnoremap Y y$
 
