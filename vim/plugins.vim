@@ -30,6 +30,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
+  Plugin 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
 
   call vundle#end()
 else
@@ -52,6 +53,15 @@ let g:airline#extensions#tabline#show_splits=0
 
 """ DelimitMate
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
+
+
+""" Quickscope
+let g:qs_highlight_on_keys = ['f', 'F'] " Trigger highlights only when one of these keys is pressed
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
 
 
 """ FileBeagle
