@@ -31,6 +31,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
   Plugin 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
+  Plugin 'christoomey/vim-system-copy' " Copy/paste using system clipboard
 
   call vundle#end()
 else
