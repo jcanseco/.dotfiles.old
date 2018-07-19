@@ -28,7 +28,9 @@ alias igt="git"
 alias gt="git"
 alias got="git"
 
-alias vdot="vim ~/.dotfiles/README.md"
+alias v="~/.dotfiles/zsh/scripts/v.sh"
+alias vs="source ~/.dotfiles/zsh/scripts/vs.sh"
+alias vdot="vim ~/.dotfiles"
 
 alias dot="cd ~/.dotfiles/"
 alias ws="cd ~/Workspace/"
@@ -64,16 +66,6 @@ setopt CHASE_LINKS # Resolve symlinks when using cd
 # Set zsh to automatically list directory contents whenever you change directories
 function chpwd() {
   ls
-}
-
-# Convenience function; open the current directory in vim if no args are supplied
-# Otherwise, the args are opened normally just like in the regular 'vim' command
-function v() {
-  if [[ $# == 0 ]]; then
-    echo "Opening current directory in vim disabled due to bugs with using vim in ecelinux."
-  else
-    vim $@
-  fi
 }
 
 # Search for files within the current directory whose filename contains a given string
