@@ -14,7 +14,8 @@ if [[ -f ./$1 ]]; then
 fi
 
 # Prompt user regarding creating a new file if it does not exist.
-read -p "vim: Creating new file '$1'. Continue? [Y/n]: " opt
+read -n1 -p "vim: Creating new file '$1'. Continue? [Y/n]: " opt
+printf "\n"
 if [[ $opt == "Y" ]]; then
     vim $1
     exit 0
