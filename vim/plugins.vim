@@ -35,6 +35,11 @@ Plug 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories be
 Plug 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
 Plug 'christoomey/vim-system-copy' " Copy/paste using system clipboard
 
+" Helper function for building and installing YCM
+" Note that '--clang-completer' builds YCM with semantic completion support for C/C++; remove it and reinstall YCM if you do not want this feature.
+" Note that YCM comes with semantic completion support for Python by default.
+" Refer to the README if you want semantic completion support for other languages.
+" To reinstall YCM, you need to delete the ~/.vim/plugged/YouCompleteMe directory and run :PlugInstall in vim.
 function! BuildYCM(info)
     if a:info.status == 'installed' || a:info.force
         !./install.py --clang-completer
