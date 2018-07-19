@@ -18,7 +18,6 @@ zgen load hlissner/zsh-autopair # Auto-close and delete matching delimiters
 source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 
 # Aliases
-alias v="~/.dotfiles/zsh/scripts/v.sh"
 alias za="zathura --fork"
 alias tgz="tar -xvzf"
 alias open="nemo"
@@ -29,6 +28,8 @@ alias igt="git"
 alias gt="git"
 alias got="git"
 
+alias v="~/.dotfiles/zsh/scripts/v.sh"
+alias vs="source ~/.dotfiles/zsh/scripts/vs.sh"
 alias vdot="vim ~/.dotfiles"
 
 alias dot="cd ~/.dotfiles/"
