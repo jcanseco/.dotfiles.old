@@ -1,11 +1,11 @@
 """ Vim-Plug
 if empty(glob('~/.vim/autoload/plug.vim'))
-  " Auto-install vim-plug and plugins when opening vim on a new machine that
-  " does not have vim-plug installed
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-  echomsg 'Installing plugins for the first time. Restart vim when done.'
+    " Auto-install vim-plug and plugins when opening vim on a new machine that
+    " does not have vim-plug installed
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    echomsg 'Installing plugins for the first time. Restart vim when done.'
 endif
 
 
@@ -62,9 +62,9 @@ let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable
 """ Quickscope
 let g:qs_highlight_on_keys = ['f', 'F'] " Trigger highlights only when one of these keys is pressed
 augroup qs_colors
-  autocmd!
-  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+    autocmd!
+    autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+    autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 augroup END
 
 
@@ -86,19 +86,19 @@ let g:ctrlp_match_window='min:10,max10'
 
 " Ignore .git and other source control directories, node_modules, Jekyll _site dirs, .o and other binary files output by compilers, etc.
 let g:ctrlp_custom_ignore={
-  \ 'dir': '\.(git|svn|hg)$\|_site\|\.jsexe$\|node_modules$',
-  \ 'file': '\v\.(o|hi|js_o|js_hi|dyn_hi|dyn_o)',
-  \ }
+            \ 'dir': '\.(git|svn|hg)$\|_site\|\.jsexe$\|node_modules$',
+            \ 'file': '\v\.(o|hi|js_o|js_hi|dyn_hi|dyn_o)',
+            \ }
 
 " Speed up indexing for CtrlP by using SilverSearcher
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
-  \ --ignore .git
-  \ --ignore .svn
-  \ --ignore .hg
-  \ --ignore .DS_Store
-  \ --ignore "**/*.pyc"
-  \ --ignore review
-  \ -g ""'
+            \ --ignore .git
+            \ --ignore .svn
+            \ --ignore .hg
+            \ --ignore .DS_Store
+            \ --ignore "**/*.pyc"
+            \ --ignore review
+            \ -g ""'
 
 " Speed up matching for CtrlP by using a custom matcher
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }

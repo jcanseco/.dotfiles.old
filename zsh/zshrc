@@ -62,41 +62,41 @@ setopt CHASE_LINKS # Resolve symlinks when using cd
 
 # Set zsh to automatically list directory contents whenever you change directories
 function chpwd() {
-  ls
+    ls
 }
 
 # Search for files within the current directory whose filename contains a given string
 # Usage: search <filename>
 function search() {
-  find . -iname "*$@*" | less
+    find . -iname "*$@*" | less
 }
 
 # Create a symlink to the current directory in ~/Quicklinks/
 # Usage: mkql <name of quicklink>
 function mkql() {
-  if [ -d ~/Quicklinks/ ]; then
-    ln -s "$(pwd -P)" ~/Quicklinks/"$1"
-  else
-    echo "Error: ~/Quicklinks/ does not exist."
-  fi
+    if [ -d ~/Quicklinks/ ]; then
+        ln -s "$(pwd -P)" ~/Quicklinks/"$1"
+    else
+        echo "Error: ~/Quicklinks/ does not exist."
+    fi
 }
 
 # Execute a command in all tmux panes
 # Usage: all <command>
 # Warning: does not work if you have a program running in one of the panes; it'll just type out the command letter by letter
 function all() {
-  local cmd="$*"
-  local active_pane_id=$TMUX_PANE
-  local pane_ids=($(tmux list-panes -F '#{pane_id}'))
-  for pane_id in $pane_ids; do
-    if [[ $pane_id != $active_pane_id ]]; then
-      local CR=C-m # Carriage return in tmux
-      tmux send-keys -t $pane_id "$cmd" $CR
-    fi
-  done
+    local cmd="$*"
+    local active_pane_id=$TMUX_PANE
+    local pane_ids=($(tmux list-panes -F '#{pane_id}'))
+    for pane_id in $pane_ids; do
+        if [[ $pane_id != $active_pane_id ]]; then
+            local CR=C-m # Carriage return in tmux
+            tmux send-keys -t $pane_id "$cmd" $CR
+        fi
+    done
 
-  # Execute the command in the active pane (i.e. the pane executing this function) last.
-  # This is because a command may involve termination of the pane, and we don't want to
-  # terminate the active pane before it could send out the command to other panes.
-  eval $cmd
+    # Execute the command in the active pane (i.e. the pane executing this function) last.
+    # This is because a command may involve termination of the pane, and we don't want to
+    # terminate the active pane before it could send out the command to other panes.
+    eval $cmd
 }
