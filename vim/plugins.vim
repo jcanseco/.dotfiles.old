@@ -1,40 +1,43 @@
-""" Plugins
-filetype off " Required by Vundle
-set runtimepath+=~/.vim/bundle/Vundle.vim " Add the Vundle installation to the runtime path
-if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
-  call vundle#begin('~/.vim/bundle') " Download plugins into the specified path
-
-  Plugin 'VundleVim/Vundle.vim' " Required for Vundle to work
-  Plugin 'joshdick/onedark.vim' " One Dark theme
-  Plugin 'vim-airline/vim-airline' " Status line
-  Plugin 'vim-airline/vim-airline-themes' " Themes for vim-airline
-  Plugin 'Raimondi/delimitMate' " Automatic closing of quotes, parenthesis, brackets, etc.
-  Plugin 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces) and adjust shiftwidth and expandtab accordingly
-  Plugin 'sickill/vim-pasta' " Context-aware pasting (i.e. changes indentation of pasted text to match that of surrounding text)
-  Plugin 'tpope/vim-commentary' " Comment stuff out
-  Plugin 'sheerun/vim-polyglot' " Better syntax highlighting for various languages
-  Plugin 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
-  Plugin 'jeetsukumaran/vim-filebeagle' " File browser
-  Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finder
-  Plugin 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
-  Plugin 'lokikl/vim-ctrlp-ag' " CtrlP extension; search for strings throughout a project using Ag
-  Plugin 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function definitions in the current file without using tags
-  Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
-  Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
-  Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
-  Plugin 'lifepillar/vim-mucomplete' " Auto-completion
-  Plugin 'benekastah/neomake' " Code linter
-  Plugin 'lervag/vimtex' " LaTeX plugin
-  Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
-  Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
-  Plugin 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
-  Plugin 'christoomey/vim-system-copy' " Copy/paste using system clipboard
-
-  call vundle#end()
-else
-  echomsg 'Error: Vundle not installed.'
+""" Vim-Plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  " Auto-install vim-plug and plugins when opening vim on a new machine that
+  " does not have vim-plug installed
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  echomsg 'Installing plugins for the first time. Restart vim when done.'
 endif
-filetype plugin indent on " Required by Vundle
+
+
+""" Plugins
+call plug#begin('~/.vim/plugged') " Download plugins into the specified path
+
+Plug 'joshdick/onedark.vim' " One Dark theme
+Plug 'vim-airline/vim-airline' " Status line
+Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
+Plug 'Raimondi/delimitMate' " Automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces) and adjust shiftwidth and expandtab accordingly
+Plug 'sickill/vim-pasta' " Context-aware pasting (i.e. changes indentation of pasted text to match that of surrounding text)
+Plug 'tpope/vim-commentary' " Comment stuff out
+Plug 'sheerun/vim-polyglot' " Better syntax highlighting for various languages
+Plug 'christoomey/vim-tmux-navigator' " Move between vim-splits and tmux panes seamlessly
+Plug 'jeetsukumaran/vim-filebeagle' " File browser
+Plug 'ctrlpvim/ctrlp.vim' " Fuzzy finder
+Plug 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up matching
+Plug 'lokikl/vim-ctrlp-ag' " CtrlP extension; search for strings throughout a project using Ag
+Plug 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function definitions in the current file without using tags
+Plug 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
+Plug 'ludovicchabant/vim-gutentags' " Tag files generator/manager
+Plug 'MattesGroeger/vim-bookmarks' " Add bookmarks
+Plug 'lifepillar/vim-mucomplete' " Auto-completion
+Plug 'benekastah/neomake' " Code linter
+Plug 'lervag/vimtex' " LaTeX Plug
+Plug 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
+Plug 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
+Plug 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
+Plug 'christoomey/vim-system-copy' " Copy/paste using system clipboard
+
+call plug#end()
 
 
 """ Airline

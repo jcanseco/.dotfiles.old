@@ -130,14 +130,6 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 ### Vim
 
-* [Vundle](https://github.com/VundleVim/Vundle.vim)
-
-   ```
-   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-   ```
-
-   Invoke `:PluginInstall` while in Vim to install plugins.
-
 * Clang and ClangTidy (for Neomake)
 
    ```
