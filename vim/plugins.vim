@@ -107,6 +107,10 @@ let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in 
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
 
 
+""" Vim-Pasta
+let g:pasta_disabled_filetypes = ['ctrlp'] " Disable vim-pasta when on the CtrlP prompt
+
+
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
