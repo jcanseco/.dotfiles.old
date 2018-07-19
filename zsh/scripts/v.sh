@@ -1,5 +1,6 @@
 #!/bin/bash
 # Helper script for opening files in vim.
+# Usage: v.sh [Filename]
 
 # Open current directory by default if no file argument given.
 if [[ $# == 0 ]]; then
