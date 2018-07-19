@@ -22,10 +22,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
-  Plugin 'shougo/deoplete.nvim' " Auto-completion
-  Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
-  Plugin 'roxma/nvim-yarp' " Remote plugin framework; required by Deoplete to work on Vim 8
-  Plugin 'roxma/vim-hug-neovim-rpc' " Compatibility layer for Neovim RPC; required by Deoplete to work on Vim 8
+  Plugin 'lifepillar/vim-mucomplete' " Auto-completion
   Plugin 'benekastah/neomake' " Code linter
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
@@ -54,6 +51,10 @@ let g:airline#extensions#tabline#show_splits=0
 
 """ DelimitMate
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
+
+
+""" Vim-Pasta
+let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
 
 
 """ Quickscope
@@ -106,25 +107,17 @@ let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in 
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
 
 
-""" Vim-Pasta
-let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
-
-
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
 
 
-""" Deoplete
-let g:deoplete#enable_at_startup = 0
-autocmd InsertEnter * call deoplete#enable()
-
-" Required fields for Deoplete-Clang (see Deoplete-Clang GitHub page for info)
-let g:deoplete#sources#clang#libclang_path = "/usr/lib/llvm-3.8/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header = "/usr/include/clang/"
-
-" Automatically close the Scratch (i.e Preview) window
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+""" MuComplete
+set completeopt+=longest,menuone,noselect,noinsert
+set completeopt-=preview
+set shortmess+=c " Disable completion messages
+set belloff+=ctrlg " Disable bell sounds
+let g:mucomplete#enable_auto_at_startup = 1
 
 
 """ Neomake
@@ -158,6 +151,7 @@ let g:neomake_cpp_clangtidy_maker = {
 let g:vimtex_view_method = 'zathura' " Set the default PDF viewer
 let g:vimtex_quickfix_latexlog = {'fix_paths' : 0} " Fixes bug with NeoVim support which prevents the opening of the error window
 let g:vimtex_compiler_latexmk = {'callback' : 0} " Disable compiler callback (used for displaying errors when performing background compilations) since 'clientserver' is not supported in most vim distributions
+
 
 """ Vim-Polyglot
 let g:polyglot_disabled = ['latex']
