@@ -16,7 +16,6 @@ Plug 'joshdick/onedark.vim' " One Dark theme
 Plug 'vim-airline/vim-airline' " Status line
 Plug 'vim-airline/vim-airline-themes' " Themes for vim-airline
 Plug 'Raimondi/delimitMate' " Automatic closing of quotes, parenthesis, brackets, etc.
-Plug 'tpope/vim-sleuth' " Detect indent style (tabs vs. spaces) and adjust shiftwidth and expandtab accordingly
 Plug 'sickill/vim-pasta' " Context-aware pasting (i.e. changes indentation of pasted text to match that of surrounding text)
 Plug 'tpope/vim-commentary' " Comment stuff out
 Plug 'sheerun/vim-polyglot' " Better syntax highlighting for various languages
