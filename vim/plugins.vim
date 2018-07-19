@@ -130,6 +130,8 @@ let g:bookmark_no_default_key_mappings = 1
 let g:ycm_global_ycm_extra_conf = '~/.dotfiles/vim/.ycm_extra_conf.py' " Global config for C/C++ semantic completion
 let g:ycm_min_num_of_chars_for_completion = 1 " Start completion from the first character
 let g:ycm_collect_identifiers_from_tags_files = 1 " Turn on tag completion
+let g:ycm_register_as_syntastic_checker = 0 " Turn off built-in syntax checker
+let g:ycm_show_diagnostics_ui = 0 " Turn off built-in syntax checker
 set completeopt-=preview " Only show completion as a list instead of a sub-window
 
 
