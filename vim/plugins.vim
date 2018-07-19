@@ -25,6 +25,8 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
+  Plugin 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
+  Plugin 'christoomey/vim-system-copy' " Copy/paste using system clipboard
 
   call vundle#end()
 else
@@ -49,10 +51,18 @@ let g:airline#extensions#tabline#show_splits=0
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
 
 
+""" Quickscope
+let g:qs_highlight_on_keys = ['f', 'F'] " Trigger highlights only when one of these keys is pressed
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+augroup END
+
+
 """ FileBeagle
 let g:filebeagle_suppress_keymaps = 1
 let g:filebeagle_show_hidden = 1
-let g:filebeagle_show_line_relativenumbers = 1
 
 
 """ CtrlP
@@ -60,9 +70,9 @@ let g:ctrlp_cmd='CtrlPMixed' " Set CtrlP to search files, most-recently-used, an
 let g:ctrlp_working_path_mode='ra' " Set CtrlP to index from the project root (identified as the closest ancestral directory for the current file containing a .git directory or a CtrlP root marker)
 let g:ctrlp_root_markers=['.ctrlp_root'] " CtrlP root marker; marks the project root; takes precedence over the .git folder (i.e. if it exists, this file will be used instead to identify the project root) (Note: only works if ctrlp_working_path_mode is set to 'ra')
 let g:ctrlp_switch_buffer=0 " Open file in current split even if it's already opened somewhere else (another split, window, etc.)
+let g:ctrlp_reuse_window = 'filebeagle\|netrw\|help\|quickfix' " Open file in current window even if current window was created by a plugin, help, or quickfix
 let g:ctrlp_max_files=30000
 let g:ctrlp_follow_symlinks=1
-let g:ctrlp_use_caching=0
 let g:ctrlp_match_window='min:10,max10'
 
 " Ignore .git and other source control directories, node_modules, Jekyll _site dirs, .o and other binary files output by compilers, etc.
@@ -79,6 +89,10 @@ let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_tjump_only_silent=1 " Go to tag directly if there is only one tag found without opening the CtrlP window
 let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in the CtrlP window
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
+
+
+""" Vim-Pasta
+let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
 
 
 """ Vim-Bookmarks

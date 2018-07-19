@@ -29,7 +29,7 @@ colorscheme onedark
 set number " Show current line number on the side bar
 set noshowmode " Disable the mode status at the bottom
 set showcmd " Show last command executed at the bottom of screen
-set scrolloff=8 " Keep 8 screen lines above/below the cursor if possible
+set scrolloff=2 " Keep 2 screen lines above/below the cursor if possible
 set ignorecase " Ignore case when searching ...
 set smartcase " ... unless search pattern contains upper case characters
 set smartindent " Smart autoindenting when starting a new line
@@ -46,7 +46,6 @@ set hlsearch " Highlight search results
 set noswapfile " Don't make swap files
 set formatoptions=croqlj " Format options that are good for Google style. See :help fo-table
 set backspace=indent,eol,start " Allow backspacing through autoindents, line-endings, and backwards through the start of an insertion
-set cursorline " Highlight current line
 set wildmenu " Show graphical list of suggestions that you can cycle through when you hit <TAB> while typing a command
 set incsearch " Search as characters are entered
 
@@ -56,10 +55,6 @@ set expandtab " Replace tabs with spaces
 set tabstop=4 " # of spaces used to visually represent the <TAB> character. So when vim opens a file and sees a <TAB> char, it represents that with the given # of spaces
 set softtabstop=4 " # of spaces inserted when you hit tab in Insert mode, and the # of spaces deleted when you hit backspace on a tab
 set shiftwidth=4 " # of spaces to use for indent and unindent
-
-" Language-specific tab control
-autocmd filetype c setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
-autocmd filetype cpp setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
 
 """ Auto Commands

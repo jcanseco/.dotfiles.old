@@ -1,6 +1,10 @@
 " Set the Leader key
 let mapleader=','
 
+" Save and Save All
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>sa :wa<CR>
+
 " Like 'C' and 'D', yank from cursor to end of line
 nnoremap Y y$
 
@@ -31,7 +35,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Remove all trailing whitespace using 'Leader + t'
-nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR>
+nnoremap <Leader>t :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR> :w<CR> :noh<CR>
 
 " Refresh current buffer to match the saved state using 'Leader + r', and then save the file right after to remove the 'trailing whitespace' warning on airline.
 nnoremap <Leader>r :e!<CR> :w<CR>
