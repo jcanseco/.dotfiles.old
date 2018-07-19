@@ -37,7 +37,7 @@ Plug 'christoomey/vim-system-copy' " Copy/paste using system clipboard
 
 function! BuildYCM(info)
     if a:info.status == 'installed' || a:info.force
-        !./install.py
+        !./install.py --clang-completer
     endif
 endfunction
 Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') } " Auto-completion
