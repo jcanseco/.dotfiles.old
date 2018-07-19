@@ -67,10 +67,6 @@ nnoremap mc :BookmarkClear<CR>
 " Show all bookmarks (vim-bookmarks)
 nnoremap ma :BookmarkShowAll<CR>
 
-" Cycle through Deoplete suggestions using 'Tab' and 'Shift + Tab'
-inoremap <silent><expr><Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <silent><expr><S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
 " Toggle continuous compilation for LaTex docs
 nmap <Leader>ll <Plug>(vimtex-compile)
 

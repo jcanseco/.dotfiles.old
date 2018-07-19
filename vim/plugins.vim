@@ -22,10 +22,6 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
-  Plugin 'shougo/deoplete.nvim' " Auto-completion
-  Plugin 'zchee/deoplete-clang' " Auto-completion for C, C++, Obj-C, Obj-C++
-  Plugin 'roxma/nvim-yarp' " Remote plugin framework; required by Deoplete to work on Vim 8
-  Plugin 'roxma/vim-hug-neovim-rpc' " Compatibility layer for Neovim RPC; required by Deoplete to work on Vim 8
   Plugin 'benekastah/neomake' " Code linter
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
@@ -116,18 +112,6 @@ let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
 
 
-""" Deoplete
-let g:deoplete#enable_at_startup = 0
-autocmd InsertEnter * call deoplete#enable()
-
-" Required fields for Deoplete-Clang (see Deoplete-Clang GitHub page for info)
-let g:deoplete#sources#clang#libclang_path = "/usr/lib/llvm-3.8/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header = "/usr/include/clang/"
-
-" Automatically close the Scratch (i.e Preview) window
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
-
 """ Neomake
 autocmd! BufWritePost * Neomake " Run Neomake every time the file is saved
 
@@ -159,6 +143,7 @@ let g:neomake_cpp_clangtidy_maker = {
 let g:vimtex_view_method = 'zathura' " Set the default PDF viewer
 let g:vimtex_quickfix_latexlog = {'fix_paths' : 0} " Fixes bug with NeoVim support which prevents the opening of the error window
 let g:vimtex_compiler_latexmk = {'callback' : 0} " Disable compiler callback (used for displaying errors when performing background compilations) since 'clientserver' is not supported in most vim distributions
+
 
 """ Vim-Polyglot
 let g:polyglot_disabled = ['latex']
