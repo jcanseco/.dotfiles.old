@@ -132,6 +132,7 @@ let g:ycm_min_num_of_chars_for_completion = 1 " Start completion from the first 
 let g:ycm_collect_identifiers_from_tags_files = 1 " Turn on tag completion (Warning: may be slow if tags file is too big)
 let g:ycm_register_as_syntastic_checker = 0 " Turn off built-in syntax checker
 let g:ycm_show_diagnostics_ui = 0 " Turn off built-in syntax checker
+let g:ycm_python_binary_path = 'python' " Use the first Python executable YCM can find (useful when working in a virtualenv that uses a specific Python version)
 set completeopt-=preview " Only show completion as a list instead of a sub-window
 
 
