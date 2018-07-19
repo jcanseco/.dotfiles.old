@@ -117,7 +117,8 @@ let g:bookmark_no_default_key_mappings = 1
 
 
 """ Deoplete
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
+autocmd InsertEnter * call deoplete#enable()
 
 " Required fields for Deoplete-Clang (see Deoplete-Clang GitHub page for info)
 let g:deoplete#sources#clang#libclang_path = "/usr/lib/llvm-3.8/lib/libclang.so"
