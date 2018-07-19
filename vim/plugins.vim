@@ -22,6 +22,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'ludovicchabant/vim-gutentags' " Tag files generator/manager
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
+  Plugin 'lifepillar/vim-mucomplete' " Auto-completion
   Plugin 'benekastah/neomake' " Code linter
   Plugin 'lervag/vimtex' " LaTeX plugin
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
@@ -50,6 +51,10 @@ let g:airline#extensions#tabline#show_splits=0
 
 """ DelimitMate
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
+
+
+""" Vim-Pasta
+let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
 
 
 """ Quickscope
@@ -103,13 +108,17 @@ let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in 
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
 
 
-""" Vim-Pasta
-let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
-
-
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
+
+
+""" MuComplete
+set completeopt+=longest,menuone,noselect,noinsert
+set completeopt-=preview
+set shortmess+=c " Disable completion messages
+set belloff+=ctrlg " Disable bell sounds
+let g:mucomplete#enable_auto_at_startup = 1
 
 
 """ Neomake
