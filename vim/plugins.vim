@@ -108,7 +108,7 @@ let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each matc
 
 
 """ Vim-Pasta
-let g:pasta_disabled_filetypes = ['ctrlp'] " Disable vim-pasta when on the CtrlP prompt
+let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
 
 
 """ Vim-Bookmarks
