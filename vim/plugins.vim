@@ -104,4 +104,5 @@ set completeopt+=longest,menuone,noselect,noinsert
 set completeopt-=preview
 set shortmess+=c " Disable completion messages
 set belloff+=ctrlg " Disable bell sounds
+let g:mucomplete#no_popup_mappings = 1
 let g:mucomplete#enable_auto_at_startup = 1
