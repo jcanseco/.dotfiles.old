@@ -75,6 +75,7 @@ let g:ctrlp_cmd='CtrlPMixed' " Set CtrlP to search files, most-recently-used, an
 let g:ctrlp_working_path_mode='ra' " Set CtrlP to index from the project root (identified as the closest ancestral directory for the current file containing a .git directory or a CtrlP root marker)
 let g:ctrlp_root_markers=['.ctrlp_root'] " CtrlP root marker; marks the project root; takes precedence over the .git folder (i.e. if it exists, this file will be used instead to identify the project root) (Note: only works if ctrlp_working_path_mode is set to 'ra')
 let g:ctrlp_switch_buffer=0 " Open file in current split even if it's already opened somewhere else (another split, window, etc.)
+let g:ctrlp_reuse_window = 'filebeagle\|netrw\|help\|quickfix' " Open file in current window even if current window was created by a plugin, help, or quickfix
 let g:ctrlp_max_files=30000
 let g:ctrlp_follow_symlinks=1
 let g:ctrlp_use_caching=0
