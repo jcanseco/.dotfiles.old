@@ -18,9 +18,8 @@ zgen load hlissner/zsh-autopair # Auto-close and delete matching delimiters
 source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 
 # Aliases
-alias za="zathura --fork"
-alias tgz="tar -xvzf"
 alias open="nemo"
+alias tgz="tar -xvzf"
 
 alias cd..="cd .."
 alias gti="git"
@@ -63,6 +62,16 @@ setopt CHASE_LINKS # Resolve symlinks when using cd
 # Set zsh to automatically list directory contents whenever you change directories
 function chpwd() {
     ls
+}
+
+# Open the given PDF file in Zathura
+# Usage: za <filename>
+function za() {
+    if [ ! -f ./$1 ]; then
+        echo "Error: File '$1' not found."
+    else
+        zathura --fork $1
+    fi
 }
 
 # Search for files within the current directory whose filename contains a given string
