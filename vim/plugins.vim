@@ -28,13 +28,19 @@ Plug 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function de
 Plug 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
 Plug 'ludovicchabant/vim-gutentags' " Tag files generator/manager
 Plug 'MattesGroeger/vim-bookmarks' " Add bookmarks
-Plug 'lifepillar/vim-mucomplete' " Auto-completion
 Plug 'benekastah/neomake' " Code linter
 Plug 'lervag/vimtex' " LaTeX Plug
 Plug 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
 Plug 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
 Plug 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
 Plug 'christoomey/vim-system-copy' " Copy/paste using system clipboard
+
+function! BuildYCM(info)
+    if a:info.status == 'installed' || a:info.force
+        !./install.py
+    endif
+endfunction
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') } " Auto-completion
 
 call plug#end()
 
@@ -115,13 +121,11 @@ let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
 
 
-""" MuComplete
-set completeopt+=longest,menuone,noselect,noinsert
-set completeopt-=preview
-set shortmess+=c " Disable completion messages
-set belloff+=ctrlg " Disable bell sounds
-let g:mucomplete#no_popup_mappings = 1
-let g:mucomplete#enable_auto_at_startup = 1
+""" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.dotfiles/vim/.ycm_extra_conf.py' " Global config for C/C++ semantic completion
+let g:ycm_min_num_of_chars_for_completion = 1 " Start completion from the first character
+let g:ycm_collect_identifiers_from_tags_files = 1 " Turn on tag completion
+set completeopt-=preview " Only show completion as a list instead of a sub-window
 
 
 """ Neomake

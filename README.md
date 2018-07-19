@@ -1,6 +1,6 @@
 # Set-up
 
-The following set-up instructions assume that you are working on a machine with Ubuntu 16.04 (Xenial). If you're using a different distro, use this as a guideline only, and search up the instructions relevant to your distro at each step.
+The following set-up instructions assume that you are working on a machine with Ubuntu 16.04. If you're using a different distro, use this as a guideline only, and search up the instructions relevant to your distro at each step.
 
 ## Install the Main Tools
 
@@ -47,6 +47,8 @@ sudo apt-get install vim
 ```
 
 Make sure to open `vim` at least once to check that the correct version (Vim 8) has been installed.
+
+We also need to have support for Python scripting (for YouCompleteMe). Run `vim --version | grep python` and ensure that there is a `+` before either Python 2 or 3. If you don't, you will need to [compile vim from source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) (don't worry, it's easy).
 
 ## Set up the Home Directory
 
@@ -130,7 +132,7 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
 
 ### Vim
 
-* Clang and ClangTidy (for Neomake)
+* Clang (including LibClang) and ClangTidy (for YouCompleteMe and Neomake)
 
    ```
    sudo apt-get install clang
@@ -150,6 +152,19 @@ Create the `Workspace` and `Quicklinks` directories in the home directory if the
    ```
 
    Ensure that `ag` exists in `/usr/bin/`. Also, try invoking `ag` in the terminal at least once.
+
+
+* YouCompleteMe Setup
+
+   Setting up YouCompleteMe is actually fairly straightforward; simply follow the instructions for your OS [here](https://github.com/Valloric/YouCompleteMe#ubuntu-linux-x64) (Ubuntu in our case).
+
+   The short set-up guide covers which external dependencies you need to install. Make sure these dependencies are installed before letting vim-plug build and install YouCompleteMe. If you accidentally let vim-plug attempt the build before installing the dependencies, simply delete the `~/.vim/plugged/YouCompleteMe` directory, then open vim and enter `:PlugInstall` to retry the installation (this is, in general, a fool-proof way to reinstall YouCompleteMe any time).
+
+   The short guide also includes instructions on how to install YouCompleteMe with semantic completions for supported languages on top of the base YouCompleteMe installation, as well as the dependencies you will need to install for each language (note that for C/C++, we already installed its depedency, `libclang`).
+
+   That's it. You don't actually need to refer to the [full installation guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) unless you're on a different distro or something goes wrong with the installation.
+
+   Lastly, read the sections for the languages you plan to use with semantic completion in the [user guide](https://github.com/Valloric/YouCompleteMe#user-guide) to see set-up steps specific to that language (note that C/C++ is already taken care of for you via the `.ycm_extra_conf.py`).
 
 * LaTeX Setup (optional)
 
