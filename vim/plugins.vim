@@ -21,6 +21,7 @@ if isdirectory(expand('$HOME/.vim/bundle/Vundle.vim'))
   Plugin 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function definitions in the current file without using tags
   Plugin 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
   Plugin 'MattesGroeger/vim-bookmarks' " Add bookmarks
+  Plugin 'lifepillar/vim-mucomplete' " Auto-completion
   Plugin 'dbakker/vim-projectroot' " Helpers for guessing the project root using heuristics
   Plugin 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
   Plugin 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
@@ -47,6 +48,10 @@ let g:airline#extensions#tabline#show_splits=0
 
 """ DelimitMate
 imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR" " Create new line and move cursor one tab into body when creating code block with braces
+
+
+""" Vim-Pasta
+let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
 
 
 """ Quickscope
@@ -89,10 +94,14 @@ let g:ctrlp_tjump_skip_tag_name=1 " Don't display the actual tag name itself in 
 let g:ctrlp_tjump_shortener = ['/.*/', ''] " Show only the filename of each match instead of the full filepath
 
 
-""" Vim-Pasta
-let g:pasta_disabled_filetypes = ['ctrlp', 'python', 'coffee', 'yaml'] " Disable vim-pasta when on the CtrlP prompt in addition to filetypes that were disabled by default
-
-
 """ Vim-Bookmarks
 let g:bookmark_sign = '> '
 let g:bookmark_no_default_key_mappings = 1
+
+
+""" MuComplete
+set completeopt+=longest,menuone,noselect,noinsert
+set completeopt-=preview
+set shortmess+=c " Disable completion messages
+set belloff+=ctrlg " Disable bell sounds
+let g:mucomplete#enable_auto_at_startup = 1
