@@ -9,6 +9,7 @@ ZSH_TMUX_AUTOCONNECT="false"
 zgen oh-my-zsh # Library for Oh-My-Zsh themes and plugins
 zgen oh-my-zsh plugins/tmux # Tmux integration
 zgen oh-my-zsh plugins/colored-man-pages # Colorize man pages
+zgen oh-my-zsh plugins/docker # Docker auto-completion
 zgen load arzzen/calc.plugin.zsh # Calculator for the shell
 zgen load Tarrasch/zsh-bd # Jump back directories more easily
 zgen load zsh-users/zsh-autosuggestions # As-you-type autosuggestions
