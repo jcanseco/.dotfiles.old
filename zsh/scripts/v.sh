@@ -8,8 +8,8 @@ if [[ $# == 0 ]]; then
     exit 0
 fi
 
-# Open file if it exists.
-if [[ -f ./$1 ]]; then
+# Open file or directory if it exists.
+if [[ -f ./$1 ]] || [[ -d ./$1 ]]; then
     vim $1
     exit 0
 fi
