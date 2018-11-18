@@ -32,6 +32,7 @@
     st = status
     df = diff HEAD
     dff = diff HEAD
+    dfs = diff --staged
     a = add
     aa = add -A
     ci = commit
