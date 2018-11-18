@@ -34,7 +34,7 @@
     dff = diff HEAD
     dfs = diff --staged
     a = add
-    aa = add -A
+    aa = add -A :/
     ci = commit
     cim = commit -m
     amd = commit --amend
