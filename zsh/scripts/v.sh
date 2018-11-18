@@ -9,7 +9,7 @@ if [[ $# == 0 ]]; then
 fi
 
 # Open file or directory if it exists.
-if [[ -f ./$1 ]] || [[ -d ./$1 ]]; then
+if [[ -f $1 ]] || [[ -d $1 ]]; then
     vim $1
     exit 0
 fi
