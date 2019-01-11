@@ -34,6 +34,7 @@ Plug 'dbakker/vim-projectroot' " Helpers for guessing the project root using heu
 Plug 'pbrisbin/vim-mkdir' " Automatically create any non-existing directories before writing the buffer
 Plug 'unblevable/quick-scope' " Highlights for more efficient left/right motions using f/F
 Plug 'christoomey/vim-system-copy' " Copy/paste using system clipboard
+Plug 'google/vim-searchindex' " Make searches more like Ctrl+F on web browsers
 
 " Helper function for building and installing YCM
 " Note that '--clang-completer' builds YCM with semantic completion support for C/C++; remove it and reinstall YCM if you do not want this feature.
