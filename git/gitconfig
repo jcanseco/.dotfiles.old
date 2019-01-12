@@ -32,8 +32,9 @@
     st = status
     df = diff HEAD
     dff = diff HEAD
+    dfs = diff --staged
     a = add
-    aa = add -A
+    aa = add -A :/
     ci = commit
     cim = commit -m
     amd = commit --amend
@@ -70,4 +71,4 @@
     old = red bold
     new = green bold
 [log]
-    decorate = auto
+    decorate = on

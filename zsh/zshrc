@@ -9,6 +9,7 @@ ZSH_TMUX_AUTOCONNECT="false"
 zgen oh-my-zsh # Library for Oh-My-Zsh themes and plugins
 zgen oh-my-zsh plugins/tmux # Tmux integration
 zgen oh-my-zsh plugins/colored-man-pages # Colorize man pages
+zgen oh-my-zsh plugins/docker # Docker auto-completion
 zgen load arzzen/calc.plugin.zsh # Calculator for the shell
 zgen load Tarrasch/zsh-bd # Jump back directories more easily
 zgen load zsh-users/zsh-autosuggestions # As-you-type autosuggestions
@@ -18,15 +19,18 @@ zgen load hlissner/zsh-autopair # Auto-close and delete matching delimiters
 source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 
 # Aliases
-alias za="zathura --fork"
-alias tgz="tar -xvzf"
 alias open="nemo"
+alias tgz="tar -xvzf"
 
 alias cd..="cd .."
 alias gti="git"
 alias igt="git"
 alias gt="git"
 alias got="git"
+alias giut="git"
+alias gitu="git"
+alias giit="git"
+alias it="git"
 
 alias v="~/.dotfiles/zsh/scripts/v.sh"
 alias vs="source ~/.dotfiles/zsh/scripts/vs.sh"
@@ -65,41 +69,51 @@ setopt CHASE_LINKS # Resolve symlinks when using cd
 
 # Set zsh to automatically list directory contents whenever you change directories
 function chpwd() {
-  ls
+    ls
+}
+
+# Open the given PDF file in Zathura
+# Usage: za <filename>
+function za() {
+    if [ ! -f ./$1 ]; then
+        echo "Error: File '$1' not found."
+    else
+        zathura --fork $1
+    fi
 }
 
 # Search for files within the current directory whose filename contains a given string
 # Usage: search <filename>
 function search() {
-  find . -iname "*$@*" | less
+    find . -iname "*$@*" | less
 }
 
 # Create a symlink to the current directory in ~/Quicklinks/
 # Usage: mkql <name of quicklink>
 function mkql() {
-  if [ -d ~/Quicklinks/ ]; then
-    ln -s "$(pwd -P)" ~/Quicklinks/"$1"
-  else
-    echo "Error: ~/Quicklinks/ does not exist."
-  fi
+    if [ -d ~/Quicklinks/ ]; then
+        ln -s "$(pwd -P)" ~/Quicklinks/"$1"
+    else
+        echo "Error: ~/Quicklinks/ does not exist."
+    fi
 }
 
 # Execute a command in all tmux panes
 # Usage: all <command>
 # Warning: does not work if you have a program running in one of the panes; it'll just type out the command letter by letter
 function all() {
-  local cmd="$*"
-  local active_pane_id=$TMUX_PANE
-  local pane_ids=($(tmux list-panes -F '#{pane_id}'))
-  for pane_id in $pane_ids; do
-    if [[ $pane_id != $active_pane_id ]]; then
-      local CR=C-m # Carriage return in tmux
-      tmux send-keys -t $pane_id "$cmd" $CR
-    fi
-  done
+    local cmd="$*"
+    local active_pane_id=$TMUX_PANE
+    local pane_ids=($(tmux list-panes -F '#{pane_id}'))
+    for pane_id in $pane_ids; do
+        if [[ $pane_id != $active_pane_id ]]; then
+            local CR=C-m # Carriage return in tmux
+            tmux send-keys -t $pane_id "$cmd" $CR
+        fi
+    done
 
-  # Execute the command in the active pane (i.e. the pane executing this function) last.
-  # This is because a command may involve termination of the pane, and we don't want to
-  # terminate the active pane before it could send out the command to other panes.
-  eval $cmd
+    # Execute the command in the active pane (i.e. the pane executing this function) last.
+    # This is because a command may involve termination of the pane, and we don't want to
+    # terminate the active pane before it could send out the command to other panes.
+    eval $cmd
 }
