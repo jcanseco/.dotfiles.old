@@ -2,7 +2,7 @@
 source ~/.zgen/zgen.zsh
 
 # Plugin Configs (must go before plugins are loaded)
-ZSH_TMUX_AUTOSTART="true"
+ZSH_TMUX_AUTOSTART="false"
 ZSH_TMUX_AUTOCONNECT="false"
 
 # Plugins
