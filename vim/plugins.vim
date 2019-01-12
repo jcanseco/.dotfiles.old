@@ -26,7 +26,7 @@ Plug 'FelikZ/ctrlp-py-matcher' " Custom matcher for CtrlP used to speed up match
 Plug 'lokikl/vim-ctrlp-ag' " CtrlP extension; search for strings throughout a project using Ag
 Plug 'tacahiroy/ctrlp-funky' " CtrlP extension; search for class and function definitions in the current file without using tags
 Plug 'ivalkeen/vim-ctrlp-tjump' " CtrlP extension; provides support for tags, mainly go-to-declaration functionality
-Plug 'ludovicchabant/vim-gutentags' " Tag files generator/manager
+" Plug 'ludovicchabant/vim-gutentags' " Tag files generator/manager
 Plug 'MattesGroeger/vim-bookmarks' " Add bookmarks
 Plug 'benekastah/neomake' " Code linter
 Plug 'lervag/vimtex' " LaTeX Plug
@@ -46,7 +46,7 @@ function! BuildYCM(info)
         !./install.py --clang-completer
     endif
 endfunction
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') } " Auto-completion
+" Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') } " Auto-completion
 
 call plug#end()
 
