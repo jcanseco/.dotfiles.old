@@ -37,7 +37,7 @@ alias vs="source ~/.dotfiles/zsh/scripts/vs.sh"
 alias vdot="vim ~/.dotfiles"
 
 alias dot="cd ~/.dotfiles/"
-alias ws="cd ~/Workspace/"
+alias ws="cd" # We typically just use the home directory as our workspace in ecelinux
 alias ql="cd ~/Quicklinks/"
 alias doc="cd ~/Documents/"
 alias down="cd ~/Downloads/"
