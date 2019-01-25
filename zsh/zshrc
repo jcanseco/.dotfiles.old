@@ -114,3 +114,12 @@ function all() {
     # terminate the active pane before it could send out the command to other panes.
     eval $cmd
 }
+
+# Transfers a file from ecelinux onto the ~/Downloads folder
+function ecescp() {
+    local src_path=/home/jcanseco/$1
+    local file=$(basename $src_path)
+    local dest_path=/home/jcanseco/Downloads/$file
+
+    scp jcanseco@ecelinux3.uwaterloo.ca:$src_path $dest_path
+}
