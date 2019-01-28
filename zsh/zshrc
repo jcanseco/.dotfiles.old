@@ -22,6 +22,11 @@ source ~/.dotfiles/zsh/robbyrussell-modified.zsh-theme
 alias open="nemo"
 alias tgz="tar -xvzf"
 
+alias b="cd .."
+alias bb="cd ../.."
+alias bbb="cd ../../.."
+alias bbbb="cd ../../../.."
+
 alias cd..="cd .."
 alias gti="git"
 alias igt="git"
