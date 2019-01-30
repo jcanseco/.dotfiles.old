@@ -1,3 +1,8 @@
+Host 0
+    Hostname ecetesla0.uwaterloo.ca
+    User jcanseco
+    ForwardAgent yes
+
 Host 2
     Hostname ecelinux2.uwaterloo.ca
     User jcanseco
