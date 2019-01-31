@@ -119,7 +119,7 @@ function all() {
 
 # Transfers a file from ecelinux onto the ~/Downloads folder
 function ecescp() {
-    local src_path=/home/jcanseco/$1
+    local src_path=$1
     local file=$(basename $src_path)
     local dest_path=/home/jcanseco/Downloads/$file
 
