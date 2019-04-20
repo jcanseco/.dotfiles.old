@@ -1,46 +1,25 @@
 [user]
     name = Jazel Canseco
     email = jazel.canseco@gmail.com
+
 [alias]
-    # Show a list of git aliases currently set up
+    # List all aliases
     alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | less
 
-    # Show commit tree for current branch (alternatively, you can pass branch names to show the commit tree for select branches)
-    lol = log --pretty=oneline --abbrev-commit --graph --decorate
-
-    # Show whole commit tree
-    lola = log --pretty=oneline --abbrev-commit --graph --decorate --all
-
-    # Show whole commit tree (simplified; shows a more compact version of the overall branching history)
-    lolas = log --pretty=oneline --abbrev-commit --graph --decorate --simplify-by-decoration --all
-
-    # git psu <branchname>; push untracked local branch to remote
-    psu = push -u origin
-
-    # git psd <branchname>; delete branch from remote
-    psd = push --delete origin
-
-    # git cof <file.txt>; reset a particular file back to HEAD
-    cof = checkout --
-
-    # Show changes made in the last few commits
-    c1 = diff HEAD~1 HEAD
-    c2 = diff HEAD~2 HEAD~1
-    c3 = diff HEAD~3 HEAD~2
-
     # Basic aliases
+    l = log
     st = status
-    df = diff HEAD
-    dff = diff HEAD
-    dfs = diff --staged
+    d = diff HEAD
+    ds = diff --staged
+    du = diff
     a = add
     aa = add -A :/
     ci = commit
-    cim = commit -m
+    cm = commit -m
     amd = commit --amend
     ss = stash
     ssp = stash pop
-    br = branch
+    b = branch
     co = checkout
     cob = checkout -b
     f = fetch
@@ -55,20 +34,39 @@
     rba = rebase --abort
     r = reset
     rh = ! bash ~/.dotfiles/git/scripts/git_reset_hard.sh
+
+    # Show changes made in the last few commits
+    c1 = diff HEAD~1 HEAD
+    c2 = diff HEAD~2 HEAD~1
+    c3 = diff HEAD~3 HEAD~2
+    c4 = diff HEAD~4 HEAD~3
+    c5 = diff HEAD~5 HEAD~4
+
+    # git cof <file>; reset file back to HEAD
+    cof = checkout --
+
+    # git lg <branch>; show log graph for branch (defaults to current branch)
+    lg = log --pretty=oneline --abbrev-commit --graph --decorate
+
 [core]
     editor = vim
     excludesfile = ~/.dotfiles/git/gitignore.global
-[advice]
-    # Disable "how to stage/unstage/add" hints given by git status
-    statusHints = false
+    pager = less -+F -+X -C
+
 [push]
     default = simple
+
 [color]
     ui = true
+
 [color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+
 [log]
     decorate = on
+
+[advice]
+    statusHints = false
