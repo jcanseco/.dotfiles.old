@@ -1,5 +1,7 @@
 # Set-up
 
+**Deprecation Notice**: I revamped my dotfiles recently (Jul 2019) and moved them to a [new repository](https://github.com/jcanseco/.dotfiles).
+
 The following set-up instructions assume that you are working on a machine with Ubuntu 16.04. If you're using a different distro, use this as a guideline only, and search up the instructions relevant to your distro at each step.
 
 ## Install the Main Tools
